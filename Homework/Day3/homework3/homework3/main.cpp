@@ -118,10 +118,7 @@ void main()
 
 	int computerHand1 = rand() % 3;
 	int playerHand1 = rand() % 3;
-	Rock == 1;
-	Paper == 2;
-	Scissors == 0;
-
+	
 	printf("가위(0) 바위(1) 보(2) 중 하나를 선택하세요\n");
 	scanf_s("%d", &playerHand);
 	scanf_s("%d", &computerHand);
@@ -129,22 +126,21 @@ void main()
 	if (playerHand == 1) // 플레이어가 바위를 선택
 	{
 		printf("플레이어가 바위를 냈습니다.\n");
-		scanf_s("%d", &computerHand1);
 		computerHand1 = rand() % 3;
 	}
 	else if (playerHand == 0) // 플레이어가 가위를 선택
 	{
 		printf("플레이어가 가위를 냈습니다.\n");
-		scanf_s("%d", &computerHand1);
 		computerHand1 = rand() % 3;
 	}
 	else if (playerHand == 2) // 플레이어가 보를 선택
 	{
 		printf("플레이어가 보를 냈습니다.\n");
-		scanf_s("%d", &computerHand1);
 		computerHand1 = rand() % 3;
 	}
-	else if (computerHand == 1) // 컴퓨터가 바위를 선택
+
+
+	if (computerHand == 1) // 컴퓨터가 바위를 선택
 	{
 		printf("컴퓨터가 바위를 선택하였습니다.\n");
 		playerHand1 = rand() % 3;
