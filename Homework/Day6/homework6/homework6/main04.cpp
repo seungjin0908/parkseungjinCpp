@@ -70,15 +70,6 @@ void ChooseComputerNumber()
 			computerNumber[i] = arr[i];
 		}
 	}
-
-#ifdef DEV_MODE
-	cout << "[디버깅용] 입력한 computerNumber : ";
-	for (int i = 0; i < NUMBER_SIZE; i++)
-	{
-		cout << computerNumber[i];
-	}
-	cout << endl;
-#endif
 }
 
 void ChooseUserNumber()
@@ -98,15 +89,6 @@ void ChooseUserNumber()
 		}
 		userNumber[i] = tempNumber / divNumber % 10;
 	}
-
-#ifdef DEV_MODE
-	cout << "[디버깅용] 입력한 userNumber : ";
-	for (int i = 0; i < NUMBER_SIZE; i++)
-	{
-		cout << userNumber[i];
-	}
-	cout << endl;
-#endif
 }
 
 void CheckValidationUserNumber()
