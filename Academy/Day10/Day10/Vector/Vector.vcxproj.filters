@@ -18,16 +18,15 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Comment01.txt">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Comment02.txt">
+    <Text Include="Comment01.txt">
       <Filter>소스 파일</Filter>
     </Text>
-    <Text Include="Comment03.txt">
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vector.h">
       <Filter>소스 파일</Filter>
-    </Text>
+    </ClInclude>
   </ItemGroup>
 </Project>

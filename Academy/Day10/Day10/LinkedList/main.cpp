@@ -2,11 +2,12 @@
 
 using namespace std;
 
+template <typename T>
 struct Node
 {
-	int Data;
-	Node* Prev = nullptr;
-	Node* Next = nullptr;
+	T Data;
+	Node<T>* Prev = nullptr;
+	Node<T>* Next = nullptr;
 };
 
 
@@ -14,9 +15,9 @@ class LinkedList
 {
 
 public:
-	void AddData(int data)
+	void AddData(T data)
 	{
-		Node* newNode = new Node();
+		Node<T>* newNode = new Node<T>();
 		newNode->Data = data;
 
 		if (_root == nullptr)
@@ -25,7 +26,7 @@ public:
 		}
 		else
 		{
-			Node* currentNode = _root;
+			Node<T>* currentNode = _root;
 			while (currentNode->Next != nullptr)
 			{
 				currentNode = currentNode->Next;
@@ -38,7 +39,7 @@ public:
 
 	void RemoveData(int data)
 	{
-		Node* currentNode = _root;
+		Node<T>* currentNode = _root;
 		while (currentNode->Next != nullptr)
 		{
 			currentNode = currentNode->Next;
@@ -74,7 +75,7 @@ public:
 	}
 
 public:
-	Node* _root = nullptr;
+	Node<T>* _root = nullptr;
 };
 
 void main()
@@ -93,4 +94,11 @@ void main()
 
 	cout << "완료" << endl;
 	delete linkedlist;
+
+	Node<int> a;
+	
+	a.Data = 10;
+
+	Node<float> b;
+	b.Data = 0.4;
 }
