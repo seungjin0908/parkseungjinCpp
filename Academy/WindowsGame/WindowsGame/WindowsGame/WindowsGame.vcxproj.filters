@@ -5,12 +5,44 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Comment">
+      <UniqueIdentifier>{267fd04e-4c7f-4eff-aaf6-e69d21bba44e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.MainGame">
+      <UniqueIdentifier>{12794e67-d89f-4143-b180-113b96ae03e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Uits">
+      <UniqueIdentifier>{339fb7cc-c8ae-4b98-b193-1101dc4e6b1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WindowsMain.cpp" />
-    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="WindowsMain.cpp">
+      <Filter>00.MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFunction.cpp">
+      <Filter>99.Uits</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>99.Uits</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pch.h" />
+    <None Include="Comment.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment2.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment3.md">
+      <Filter>Comment</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>99.Uits</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunction.h">
+      <Filter>99.Uits</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

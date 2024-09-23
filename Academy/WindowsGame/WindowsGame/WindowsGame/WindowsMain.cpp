@@ -75,5 +75,71 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
 LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lparam)
 {
+	switch (message)
+	{
+	case WM_CREATE:
+		// 윈도우가 생성되었을때 발생하는 이벤트
+		// 여기에서 초기화 동작
+		break;
+	case WM_KEYDOWN:
+		switch (wParam)
+		{
+		case '1':
+		case VK_NUMPAD1:
+			printf("1번키를 눌렀다.\n");
+			break;
+		case '2':
+		case VK_NUMPAD2:
+			printf("2번키를 눌렀다.\n");
+			break;
+		default:
+			break;
+		}
+	case WM_PAINT:
+	{
+		// 화면을 그리는 이벤트
+		// 시작했을때 호출한번 되고, InvalidateRect라는 함수가 호출됐을때 한번 실행되고
+		PAINTSTRUCT ps;
+		HDC hdc = BeginPaint(hWnd, &ps);
+
+		for (int i = 0; i < 9; i++)
+		{
+			wchar_t str[100];
+			wsprintf(str, L"안녕하세요 %d", i);
+			::TextOut(hdc, 100, 100 + 50 * i, str, lstrlenW(str));
+
+			wstring str1 = format(L"안녕하세요{}", i);
+			::TextOut(hdc, 100, 100 + 50 * i, str1.c_str(), str1.length());
+			//구구단찍기 실습
+			//1단      2단       3단
+			//4단      5단       6단
+			//7단      8단       9단
+		}
+
+		for (int i = 1; i <= 9; i++)
+		{
+			for (int j = 1; j <= 9; j++)
+			{
+				wstring str = format(L"{} x {} = {}", i, j, i * j);
+				int x = 100 + ((i - 1) % 3) * 200;
+				int y = 100 + ((i - 1) / 3) * 250;
+
+				y += j * 20;
+				::TextOut(hdc, 100, 100 + 50 * i, str.c_str(), str.length());
+			}
+		}
+
+		::Rectangle(hdc, 10, 10, 100, 100);
+		::Ellipse(hdc, 500, 500, 600, 600);
+
+		::EndPaint(hWnd, &ps);
+	}
+	break;
+	case WM_DESTROY:
+		// 윈도우 종료 메세지가 왔을때 발생되는 이벤트
+		::PostQuitMessage(0);
+		break;
+	}
+
 	return DefWindowProc(hWnd, message, wParam, lparam);
 }

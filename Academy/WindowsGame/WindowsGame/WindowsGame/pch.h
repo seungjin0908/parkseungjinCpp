@@ -16,6 +16,8 @@
 #include <tchar.h>
 
 #include <iostream>
+#include <format>
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
 
 //===========================
 //	## C++ 관련 헤더 ##
@@ -23,4 +25,8 @@
 #include <algorithm>
 #include <string>
 
+//===========================
+// ## 커스텀 헤더 ##
+//===========================
+#include "CommonFunction.h"
 using namespace std;
