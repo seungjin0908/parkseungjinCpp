@@ -166,12 +166,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonFunction.h" />
+    <ClInclude Include="Defines.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Comment.md" />
-    <None Include="Comment2.md" />
-    <None Include="Comment3.md" />
+    <None Include="Comment01.md" />
+    <None Include="Comment04.md" />
+    <None Include="Comment02.md" />
+    <None Include="Comment03.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

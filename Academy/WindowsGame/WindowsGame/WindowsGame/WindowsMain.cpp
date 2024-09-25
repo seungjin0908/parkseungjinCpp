@@ -8,6 +8,7 @@ HWND				_hWnd;
 ATOM				MyRegisterClass(HINSTANCE hInstance);
 BOOL				InitInstance(HINSTANCE instance, int nCmdShow);
 LRESULT			WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lparam);
+void		SetWindowSize(int x, int y, int width, int height);
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_opt_ HINSTANCE hPrevInstance,
@@ -67,11 +68,49 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 		return FALSE;
 	}
 
+	SetWindowSize(WIN_START_X,WIN_START_Y, WIN_SIZE_X, WIN_SIZE_Y);
 	ShowWindow(hWnd, nCmdShow);
 	UpdateWindow(hWnd);
 
 	return TRUE;
 }
+
+
+void SetWindowSize(int x, int y, int width, int height)
+{
+	RECT rc;
+	rc.left = 0;
+	rc.top = 0;
+	rc.right = width;
+	rc.bottom = height;
+
+	::AdjustWindowRect(&rc, WS_OVERLAPPEDWINDOW, false);
+	::SetWindowPos(_hWnd, nullptr, x, y, rc.right - rc.left, rc.bottom- rc.top, SWP_NOZORDER);
+}
+
+POINT mousePos = {};
+
+class Enemy
+{
+public:
+	RECT rc;
+	bool isLive;
+
+	void Die()
+	{
+		isLive = false;
+	}
+	void Draw(HDC hdc)
+	{
+		::Rectangle(hdc, rc.left, rc.top, rc.right, rc.bottom);
+	}
+	bool IsLive()
+	{
+		return isLive;
+	}
+};
+
+vector<Enemy> enemies;
 
 LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lparam)
 {
@@ -80,66 +119,129 @@ LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lparam)
 	case WM_CREATE:
 		// 윈도우가 생성되었을때 발생하는 이벤트
 		// 여기에서 초기화 동작
+		srand(time(NULL));
+
+		//60프레임 -> 타이머호출기
+		SetTimer(hWnd, 1, 1000 / 60, NULL);
+
+		//두더지 튀어나오기
+		SetTimer(hWnd, 2, 1000, NULL);
+
+		for (int i = 0; i < 9; i++)
+		{
+			Enemy newEnemy;
+			newEnemy.isLive = true;
+			newEnemy.rc = {
+				(i % 3) * 100,
+				(i / 3) * 100,
+				(i % 3)*100 + 70,
+				(i / 3) * 100 + 70
+			};
+			enemies.push_back(newEnemy);
+		}
+
 		break;
+	
+	case WM_LBUTTONDOWN:
+
+		break;
+	case WM_PAINT:
+		{
+			// 화면을 그리는 이벤트
+			// 시작했을때 호출한번 되고, InvalidateRect라는 함수가 호출됐을때 한번 실행되고
+
+			PAINTSTRUCT ps;
+			HDC hdc = BeginPaint(hWnd, &ps);
+
+			for (Enemy enemy : enemies)
+			{
+				if (enemy.IsLive())
+				{
+				enemy.Draw(hdc);
+				}
+			}
+
+			::EndPaint(hWnd, &ps);
+		}
+		break;
+
 	case WM_KEYDOWN:
+	{
 		switch (wParam)
 		{
-		case '1':
-		case VK_NUMPAD1:
-			printf("1번키를 눌렀다.\n");
+		case 'A':
+			for (Enemy& enemy : enemies)
+			{
+				if (enemy.rc.left <= mousePos.x && mousePos.x <= enemy.rc.right)
+				{
+					if (enemy.rc.top <= mousePos.y && mousePos.y <= enemy.rc.bottom)
+					{
+						enemy.Die();
+					}
+				}
+			}
 			break;
-		case '2':
-		case VK_NUMPAD2:
-			printf("2번키를 눌렀다.\n");
+
+		case 'S':
+			for (Enemy& enemy : enemies)
+			{
+				printf("-----------------------\n");
+				printf("rc : %d, %d, %d, %d\n", enemy.rc.left, enemy.rc.top, enemy.rc.right, enemy.rc.bottom);
+				printf("isLive : %d\n", enemy.isLive);
+				printf("-----------------------\n");
+			}
 			break;
 		default:
 			break;
 		}
-	case WM_PAINT:
-	{
-		// 화면을 그리는 이벤트
-		// 시작했을때 호출한번 되고, InvalidateRect라는 함수가 호출됐을때 한번 실행되고
-		PAINTSTRUCT ps;
-		HDC hdc = BeginPaint(hWnd, &ps);
-
-		for (int i = 0; i < 9; i++)
-		{
-			wchar_t str[100];
-			wsprintf(str, L"안녕하세요 %d", i);
-			::TextOut(hdc, 100, 100 + 50 * i, str, lstrlenW(str));
-
-			wstring str1 = format(L"안녕하세요{}", i);
-			::TextOut(hdc, 100, 100 + 50 * i, str1.c_str(), str1.length());
-			//구구단찍기 실습
-			//1단      2단       3단
-			//4단      5단       6단
-			//7단      8단       9단
-		}
-
-		for (int i = 1; i <= 9; i++)
-		{
-			for (int j = 1; j <= 9; j++)
-			{
-				wstring str = format(L"{} x {} = {}", i, j, i * j);
-				int x = 100 + ((i - 1) % 3) * 200;
-				int y = 100 + ((i - 1) / 3) * 250;
-
-				y += j * 20;
-				::TextOut(hdc, 100, 100 + 50 * i, str.c_str(), str.length());
-			}
-		}
-
-		::Rectangle(hdc, 10, 10, 100, 100);
-		::Ellipse(hdc, 500, 500, 600, 600);
-
-		::EndPaint(hWnd, &ps);
 	}
 	break;
+
+	case WM_MOUSEMOVE:
+	{
+		mousePos.x = GET_X_LPARAM(lParam);
+		mousePos.y = GET_Y_LPARAM(lParam);
+	}
+	break;
+
+	case WM_TIMER:
+		switch (wParam)
+		{
+		case 1:
+			InvalidateRect(hWnd, NULL, true);
+			break;
+
+		case 2:
+			// 두더지 튀어나오는 로직
+			// SetTimer(hWnd, 두더지번호 * 100, 5000, NULL);
+			// 100 , 200 , 300, 400, 500, 600, 700, 800, 900 으로 만들어지겠죠
+			//  + 두더지 잡았을때 KillTimer를 꼭해주셔야합니다. (두더지번호 * 100)
+			break;
+
+		case 100:
+			//두더지 들어가는 로직
+			break;
+		case 200:
+			//두더지 들어가는 로직
+			break;
+		case 300:
+			//두더지 들어가는 로직
+			break;
+
+		default:
+			break;
+		}
+		break;
+
 	case WM_DESTROY:
 		// 윈도우 종료 메세지가 왔을때 발생되는 이벤트
+		::KillTimer(hWnd, 1);
 		::PostQuitMessage(0);
 		break;
+
+	default:
+		return DefWindowProc(hWnd, message, wParam, lParam);
 	}
 
-	return DefWindowProc(hWnd, message, wParam, lparam);
+	return DefWindowProc(hWnd, message, wParam, lParam);
 }
