@@ -14,6 +14,12 @@
     <Filter Include="99.Uits">
       <UniqueIdentifier>{339fb7cc-c8ae-4b98-b193-1101dc4e6b1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="99.Uits\Types">
+      <UniqueIdentifier>{e2036388-15ea-4de8-a8cd-6c4e83a8568d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Managers">
+      <UniqueIdentifier>{e8850c16-afd3-4702-a269-010d13cee562}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -24,6 +30,18 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>99.Uits</Filter>
+    </ClCompile>
+    <ClCompile Include="CenterRect.cpp">
+      <Filter>99.Uits\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>99.Uits\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>00.MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>01.Managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -39,6 +57,21 @@
     <None Include="Comment04.md">
       <Filter>Comment</Filter>
     </None>
+    <None Include="Comment07.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment08.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment09.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment05.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment06.md">
+      <Filter>Comment</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -49,6 +82,18 @@
     </ClInclude>
     <ClInclude Include="Defines.h">
       <Filter>99.Uits</Filter>
+    </ClInclude>
+    <ClInclude Include="CenterRect.h">
+      <Filter>99.Uits\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>99.Uits\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>00.MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>01.Managers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
