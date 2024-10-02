@@ -49,6 +49,7 @@ using namespace std;
 //==========================================
 #include "Vector2.h"
 #include "CenterRect.h"
+#include "Types.h"
 
 
 //==========================================
@@ -63,3 +64,4 @@ using namespace std;
 //	## 매니저 헤더 ##
 //==========================================
 #include "InputManager.h"
+#include "TimeManager.h"

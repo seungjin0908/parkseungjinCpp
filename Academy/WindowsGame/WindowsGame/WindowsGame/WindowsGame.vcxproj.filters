@@ -20,6 +20,9 @@
     <Filter Include="01.Managers">
       <UniqueIdentifier>{e8850c16-afd3-4702-a269-010d13cee562}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Objects">
+      <UniqueIdentifier>{55203636-1485-42e0-999f-cbdfccdf1b26}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -42,6 +45,15 @@
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
       <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Player.cpp">
+      <Filter>02.Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Box.cpp">
+      <Filter>02.Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +84,12 @@
     <None Include="Comment06.md">
       <Filter>Comment</Filter>
     </None>
+    <None Include="Comment10.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment11.md">
+      <Filter>Comment</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -94,6 +112,18 @@
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Player.h">
+      <Filter>02.Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>99.Uits\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Box.h">
+      <Filter>02.Objects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

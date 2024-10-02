@@ -6,5 +6,9 @@ struct Vector2
 	Vector2(float x, float y);
 	Vector2();
 	Vector2(POINT pt);
+
+
+	float Length();
+	Vector2 Noramlize();
 };
 

@@ -1,5 +1,8 @@
 ﻿#include "pch.h"
 #include "Game.h"
+#include "Day17Player.h"
+#include "Day17Box.h"
+
 Game::Game()
 {
 
@@ -33,32 +36,39 @@ void Game::Init(HWND hWnd)
 	DeleteObject(prev);
 
 
-	_input.Init(_hwnd);
+	Input->Init(_hwnd);
+	Time->Init();
 
 
-	_player = CenterRect(300, 100, 80, 80);
+	_player = new Day17Player();
+	_player->Init();
 }
 
 void Game::Update()
 {
-	_input.Update();
+	Input->Update();
+	Time->Update();
 
-	if (_input.GetKey(KeyCode::LeftMouse))
-	{
 
-	}
+	_player->Update();
+	
 }
 
 void Game::Render()
 {
-	if (_input.GetKey(KeyCode::LeftMouse))
+	//FPS 출력
 	{
+		uint32 fps = Time->GetFps();
+		float deltaTime = Time->GetDeltaTime();
 
-		for (int i = 0; i < 100; i++)
-		{
-			Draw::Rectangle(_hdcBack, 100 - i, 100, 400, 400);
-		}
+		wstring timeStr = ::format(L"FPS({}), DeltaTime({} ms)", fps, static_cast<int32>(deltaTime * 1000));
+		Draw::Text(_hdcBack, 0, 0, timeStr);
 	}
+
+	_player->Render(_hdcBack);
+
+
+
 
 	//==========================================
 	//	## 더블버퍼링 세팅 ##
