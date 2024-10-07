@@ -31,3 +31,10 @@ public:										\
 	}
 
 #define GET_SINGLE(ClassName)	ClassName::GetInstance()
+
+#define SAFE_DELETE(p) {if(p) delete (p); (p) = NULL;}
+#define SAFE_DELETE_ARRAY(o) {if(p) delete [] (p); (p) = NULL;}
+
+// (0.000001)
+#define EPSILON 1e-6f
+#define EQUALS(a, b) (abs(a - b) < EPSILON)

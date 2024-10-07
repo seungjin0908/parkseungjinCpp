@@ -8,6 +8,7 @@ private:
 	float _moveSpeed = 300.0f;
 
 	Vector2 _targetPoint = {};
+
 public:
 	void Init();			// 생성될떄, 초기화해야할때.
 	void Render(HDC hdc);	// 그림 그릴때,
@@ -21,5 +22,4 @@ public:
 	Day17Player() {}
 	~Day17Player() {}
 };
-
 

@@ -1,7 +1,6 @@
 ﻿#include "pch.h"
 #include "Game.h"
-#include "Day17Player.h"
-#include "Day17Box.h"
+#include "Scene.h"
 
 Game::Game()
 {
@@ -39,19 +38,15 @@ void Game::Init(HWND hWnd)
 	Input->Init(_hwnd);
 	Time->Init();
 
-
-	_player = new Day17Player();
-	_player->Init();
+	GET_SINGLE(SceneManager)->Init();
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::DevScene);
 }
 
 void Game::Update()
 {
 	Input->Update();
 	Time->Update();
-
-
-	_player->Update();
-	
+	GET_SINGLE(SceneManager)->Update();
 }
 
 void Game::Render()
@@ -65,10 +60,7 @@ void Game::Render()
 		Draw::Text(_hdcBack, 0, 0, timeStr);
 	}
 
-	_player->Render(_hdcBack);
-
-
-
+	GET_SINGLE(SceneManager)->Render(_hdcBack);
 
 	//==========================================
 	//	## 더블버퍼링 세팅 ##

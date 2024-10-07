@@ -19,4 +19,3 @@ struct CenterRect
 	RECT ToRect();
 	static CenterRect FromRect(RECT rc);
 };
-

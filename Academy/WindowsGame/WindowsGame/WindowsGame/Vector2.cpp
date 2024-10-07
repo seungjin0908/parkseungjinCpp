@@ -19,22 +19,20 @@ Vector2::Vector2(POINT pt)
 	this->y = static_cast<float>(pt.y);
 }
 
+
 float Vector2::Length()
 {
-	// 피타고라스 정의
-	// ? * ? = x * x + y * y
-
 	return static_cast<float>(::sqrt(x * x + y * y));
 }
-
-Vector2 Vector2::Noramlize()
+Vector2 Vector2::Normalize()
 {
-	float lenght = this->Length();
+	// 현재 벡터를 길이를 1로 만든다.
+	float length = this->Length();
 
-	if (lenght <= 0.0000000000001f)
+	if (length <= 0.0000000000001f)
 	{
 		return *this;
 	}
 
-	return Vector2(x / lenght, y / lenght);
+	return Vector2(x / length, y / length);
 }

@@ -23,6 +23,12 @@
     <Filter Include="02.Objects">
       <UniqueIdentifier>{55203636-1485-42e0-999f-cbdfccdf1b26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.Scenes">
+      <UniqueIdentifier>{a2533faf-ed59-488d-b7be-db9d8c8840df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Scenes\Game">
+      <UniqueIdentifier>{213eaa57-0ed4-4d63-8d18-64d79558a508}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -54,6 +60,21 @@
     </ClCompile>
     <ClCompile Include="Day17Box.cpp">
       <Filter>02.Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>03.Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="DevScene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +111,9 @@
     <None Include="Comment11.md">
       <Filter>Comment</Filter>
     </None>
+    <None Include="Comment12.md">
+      <Filter>Comment</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -124,6 +148,24 @@
     </ClInclude>
     <ClInclude Include="Day17Box.h">
       <Filter>02.Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>03.Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>99.Uits</Filter>
+    </ClInclude>
+    <ClInclude Include="DevScene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18Scene.h">
+      <Filter>03.Scenes\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
