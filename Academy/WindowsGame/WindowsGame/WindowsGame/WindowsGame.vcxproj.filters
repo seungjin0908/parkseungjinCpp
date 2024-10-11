@@ -29,6 +29,9 @@
     <Filter Include="03.Scenes\Game">
       <UniqueIdentifier>{213eaa57-0ed4-4d63-8d18-64d79558a508}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Resources">
+      <UniqueIdentifier>{8e4af0d9-4b57-4297-9ec3-384c92b61c51}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -76,6 +79,24 @@
     <ClCompile Include="Day18Scene.cpp">
       <Filter>03.Scenes\Game</Filter>
     </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceBase.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2int.cpp">
+      <Filter>99.Uits\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -112,6 +133,9 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment12.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment13.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -166,6 +190,24 @@
     </ClInclude>
     <ClInclude Include="Day18Scene.h">
       <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceBase.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2int.h">
+      <Filter>99.Uits\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>04.Resources</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,10 +15,12 @@
 #include <memory.h>
 #include <tchar.h>
 #include <windowsx.h>
+#include <wingdi.h>
 
 #include <iostream>
 #include <format>
 #pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+#pragma comment(linker, "Msimg32")
 
 //==========================================
 //	## C++ 관련 헤더 ##
@@ -51,6 +53,7 @@ using namespace std;
 #include "Types.h"
 #include "Vector2.h"
 #include "CenterRect.h"
+#include "Vector2int.h"
 
 
 
@@ -67,3 +70,9 @@ using namespace std;
 #include "InputManager.h"
 #include "TimeManager.h"
 #include "SceneManager.h"
+#include "ResourceManager.h"
+
+
+
+extern HINSTANCE	_hInstance;
+extern HWND			_hWnd;

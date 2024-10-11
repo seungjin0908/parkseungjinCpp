@@ -1,6 +1,4 @@
 ﻿#pragma once
-class Day17Player;
-class Day17Box;
 class Scene
 {
 
@@ -17,10 +15,8 @@ public:
 	Scene() {}
 	virtual ~Scene() {}
 
-private:
-	Day17Player* _player;
-	Day17Box* _box;
-
 };
+
+
 
 

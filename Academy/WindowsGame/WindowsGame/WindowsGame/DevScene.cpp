@@ -14,7 +14,6 @@ void DevScene::Render(HDC hdc)
 }
 void DevScene::Update()
 {
-
 }
 void DevScene::Release()
 {

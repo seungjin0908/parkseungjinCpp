@@ -38,3 +38,10 @@ public:										\
 // (0.000001)
 #define EPSILON 1e-6f
 #define EQUALS(a, b) (abs(a - b) < EPSILON)
+
+
+#define DELARE_CHILD(ClassName, ParentName)	\
+using Super = ParentName;					\
+public:										\
+	ClassName() {}							\
+	virtual ~ClassName() {}

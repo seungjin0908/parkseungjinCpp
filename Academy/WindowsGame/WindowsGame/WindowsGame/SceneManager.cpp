@@ -2,6 +2,8 @@
 #include "SceneManager.h"
 #include "Scene.h"
 #include "DevScene.h"
+#include "Day17Scene.h"
+#include "Day18Scene.h"
 void SceneManager::Init()
 {
 
@@ -68,8 +70,11 @@ Scene* SceneManager::CreateScene(SceneType sceneType)
 	case SceneType::DevScene:
 		scene = new DevScene();
 		break;
+	case SceneType::Day17Scene:
+		scene = new Day17Scene();
+		break;
 	case SceneType::Day18Scene:
-		scene = new Scene();
+		scene = new Day18Scene();
 		break;
 	default:
 		break;

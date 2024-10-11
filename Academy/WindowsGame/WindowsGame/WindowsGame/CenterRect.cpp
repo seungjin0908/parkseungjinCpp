@@ -51,3 +51,32 @@ CenterRect CenterRect::FromRect(RECT rc)
 
 	return CenterRect(x, y, width, height);
 }
+
+CenterRect CenterRect::MakeLTWH(float left, float top, float width, float height)
+{
+	float x = static_cast<float>(left + width / 2);
+	float y = static_cast<float>(top + height / 2);
+
+	return CenterRect(x, y, width, height);
+}
+
+float CenterRect::Top()
+{
+	return static_cast<float>(pos.y - height / 2);
+}
+
+float CenterRect::Bottom()
+{
+	return static_cast<float>(pos.y - height / 2);
+}
+
+float CenterRect::Left()
+{
+	return static_cast<float>(pos.y - height / 2);
+}
+
+float CenterRect::Right()
+{
+	return static_cast<float>(pos.y - height / 2);
+
+}

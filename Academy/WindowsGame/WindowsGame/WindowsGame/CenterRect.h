@@ -1,4 +1,9 @@
 ﻿#pragma once
+enum CenterRectDrawType
+{
+	DRAWTYPE_RECT,
+	DRAWTYPE_ELLIPSE
+};
 /// <summary>
 /// RECT는 left, top, right, bottom를 사용하여,
 /// 게임에서의 로직과는 적용하기 힘든 부분이 많아
@@ -18,4 +23,10 @@ struct CenterRect
 	//CenterRect => RECT 구조체로 변경해주는 함수
 	RECT ToRect();
 	static CenterRect FromRect(RECT rc);
+	static CenterRect FromRect(RECT rc);
+	static CenterRect MakeLTWH(float left, float top, float width, float height);
+	float Top();
+	float Bottom();
+	float Left();
+	float Right();
 };

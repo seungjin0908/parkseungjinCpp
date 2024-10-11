@@ -39,7 +39,7 @@ void Game::Init(HWND hWnd)
 	Time->Init();
 
 	GET_SINGLE(SceneManager)->Init();
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::DevScene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Day18Scene);
 }
 
 void Game::Update()
