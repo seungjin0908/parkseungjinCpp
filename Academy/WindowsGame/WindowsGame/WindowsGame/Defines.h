@@ -45,3 +45,6 @@ using Super = ParentName;					\
 public:										\
 	ClassName() {}							\
 	virtual ~ClassName() {}
+
+
+#define Alert(title, message) MessageBox(_hWnd, title, message,NULL)

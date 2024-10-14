@@ -32,6 +32,12 @@
     <Filter Include="04.Resources">
       <UniqueIdentifier>{8e4af0d9-4b57-4297-9ec3-384c92b61c51}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Objects\Day17">
+      <UniqueIdentifier>{3485fb99-c4b5-49c0-9177-9a289716925d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day19">
+      <UniqueIdentifier>{2f8e2eb3-5a2b-4f29-b10d-4e8174992134}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -55,14 +61,8 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>01.Managers</Filter>
     </ClCompile>
-    <ClCompile Include="Day17Player.cpp">
-      <Filter>02.Objects</Filter>
-    </ClCompile>
     <ClCompile Include="TimeManager.cpp">
       <Filter>01.Managers</Filter>
-    </ClCompile>
-    <ClCompile Include="Day17Box.cpp">
-      <Filter>02.Objects</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>03.Scenes</Filter>
@@ -96,6 +96,21 @@
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
       <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Box.cpp">
+      <Filter>02.Objects\Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Player.cpp">
+      <Filter>02.Objects\Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19Stone.cpp">
+      <Filter>02.Objects\Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomManager.cpp">
+      <Filter>01.Managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +153,9 @@
     <None Include="Comment13.md">
       <Filter>Comment</Filter>
     </None>
+    <None Include="Comment14.md">
+      <Filter>Comment</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -161,17 +179,11 @@
     <ClInclude Include="InputManager.h">
       <Filter>01.Managers</Filter>
     </ClInclude>
-    <ClInclude Include="Day17Player.h">
-      <Filter>02.Objects</Filter>
-    </ClInclude>
     <ClInclude Include="Types.h">
       <Filter>99.Uits\Types</Filter>
     </ClInclude>
     <ClInclude Include="TimeManager.h">
       <Filter>01.Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="Day17Box.h">
-      <Filter>02.Objects</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>03.Scenes</Filter>
@@ -208,6 +220,21 @@
     </ClInclude>
     <ClInclude Include="Sprite.h">
       <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Box.h">
+      <Filter>02.Objects\Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Player.h">
+      <Filter>02.Objects\Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19Stone.h">
+      <Filter>02.Objects\Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomManager.h">
+      <Filter>01.Managers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

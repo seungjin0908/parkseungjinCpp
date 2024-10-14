@@ -8,5 +8,21 @@ struct Vector2Int
 	Vector2Int(Vector2 vector);
 	Vector2Int(POINT point);
 
+	Vector2Int operator+(const Vector2Int& other);
+	void operator+=(const Vector2Int& other);
+
+	Vector2Int operator-(const Vector2Int& other);
+	void operator-=(const Vector2Int& other);
+
+	Vector2Int operator*(const float other);
+	void operator*=(const float other);
+
+	int32 LengthSqrt();
+	float Length();
+	int32 Dot(Vector2Int other);
+
+	bool operator==(const Vector2Int& other) const;
+	bool operator!=(const Vector2Int& other) const;
+
 };
 
