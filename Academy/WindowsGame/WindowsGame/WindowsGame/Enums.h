@@ -6,5 +6,6 @@ enum class SceneType
 	DevScene,
 	Day17Scene,
 	Day18Scene,
-	Day19Scene
+	Day19Scene,
+	Day21Scnen
 };

@@ -1,5 +1,8 @@
 ﻿#include "pch.h"
 #include "Scene.h"
+#include "GameObject.h" 
+
+
 
 void Scene::Init()
 {
@@ -7,11 +10,7 @@ void Scene::Init()
 }
 void Scene::Render(HDC hdc)
 {
-	//씬 이름 출력
-	{
-		wstring nameStr = ::format(L"CurrentScene");
-		Draw::Text(hdc, 0, 20, nameStr);
-	}
+	for(GameObject* gameObject :_gameObjets)
 }
 void Scene::Update()
 {
@@ -19,4 +18,15 @@ void Scene::Update()
 void Scene::Release()
 {
 
+}
+
+void Scene::SpaqnGameObject(GameObject* gameObject)
+{
+	if (gameObject == nullptr)return;
+
+	gameObject
+}
+
+void Scene::DespawGameObject(GameObject* gameObject)
+{
 }

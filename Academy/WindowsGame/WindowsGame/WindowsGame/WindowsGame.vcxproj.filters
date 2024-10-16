@@ -38,6 +38,12 @@
     <Filter Include="02.Objects\Day19">
       <UniqueIdentifier>{2f8e2eb3-5a2b-4f29-b10d-4e8174992134}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05.Component">
+      <UniqueIdentifier>{fba1eb9a-b08f-4da0-9aca-86c4ad3f7a4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day21">
+      <UniqueIdentifier>{99b5dc0c-940c-4761-b742-74d75fb522e7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -112,6 +118,24 @@
     <ClCompile Include="RandomManager.cpp">
       <Filter>01.Managers</Filter>
     </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>05.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>02.Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Paddle.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>05.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Ball.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -154,6 +178,9 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment14.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment15.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -235,6 +262,24 @@
     </ClInclude>
     <ClInclude Include="RandomManager.h">
       <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>05.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>02.Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Paddle.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderer.h">
+      <Filter>05.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Ball.h">
+      <Filter>02.Objects\Day21</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

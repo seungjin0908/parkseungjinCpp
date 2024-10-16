@@ -1,4 +1,5 @@
 ﻿#pragma once
+class GameObject;
 class Scene
 {
 
@@ -10,6 +11,10 @@ public:
 	virtual void Render(HDC hdc);
 	virtual void Update();
 	virtual void Release();
+
+public:
+	void SpaqnGameObject(GameObject* gameObject);
+	void DespawGameObject(GameObject* gameObject);
 
 public:
 	Scene() {}
