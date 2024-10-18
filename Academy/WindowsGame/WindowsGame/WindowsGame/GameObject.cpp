@@ -1,11 +1,10 @@
 ﻿#include "pch.h"
 #include "GameObject.h"
 #include "Component.h"
-
+#include "Collider.h"
 void GameObject::Init()
 {
 }
-
 void GameObject::Render(HDC hdc)
 {
 	for (Component* component : _components)
@@ -15,7 +14,6 @@ void GameObject::Render(HDC hdc)
 		component->Render(hdc);
 	}
 }
-
 void GameObject::Update()
 {
 	for (Component* component : _components)
@@ -25,7 +23,6 @@ void GameObject::Update()
 		component->Update();
 	}
 }
-
 void GameObject::Release()
 {
 	for (Component* component : _components)
@@ -39,14 +36,14 @@ void GameObject::Release()
 
 void GameObject::AddComponent(Component* component)
 {
-	if (component == nullptr)return;
+	if (component == nullptr) return;
 
 	component->SetOwner(this);
 	component->Init();
 	_components.push_back(component);
 }
 
-void GameObject::RemoveComponet(Component* component)
+void GameObject::RemoveComponent(Component* component)
 {
 	if (component == nullptr) return;
 
@@ -54,9 +51,18 @@ void GameObject::RemoveComponet(Component* component)
 
 	if (findIt != _components.end())
 	{
-		Component* deletComponent = *findIt;
-		deletComponent->Release();
-		SAFE_DELETE(deletComponent);
+		Component* deleteComponent = *findIt;
+		deleteComponent->Release();
+		SAFE_DELETE(deleteComponent);
 		_components.erase(findIt);
 	}
+}
+
+void GameObject::OnTriggerEnter(Collider* collider, Collider* other)
+{
+	cout << "충돌 시작 : " << collider->GetOwner()->GetName().c_str() << " -> " << other->GetOwner()->GetName().c_str() << endl;
+}
+void GameObject::OnTriggerExit(Collider* collider, Collider* other)
+{
+	cout << "충돌 끝 : " << collider->GetOwner()->GetName().c_str() << " -> " << other->GetOwner()->GetName().c_str() << endl;
 }

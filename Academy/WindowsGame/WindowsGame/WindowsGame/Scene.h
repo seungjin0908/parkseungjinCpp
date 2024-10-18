@@ -2,6 +2,10 @@
 class GameObject;
 class Scene
 {
+protected:
+	vector<GameObject*> _gameObjects;
+
+public:
 
 	//==========================================
 	//	## 기본함수
@@ -13,15 +17,14 @@ public:
 	virtual void Release();
 
 public:
-	void SpaqnGameObject(GameObject* gameObject);
-	void DespawGameObject(GameObject* gameObject);
+	void SpawnGameObject(GameObject* gameObject);
+	void DespawnGameObject(GameObject* gameObject);
+
+	GameObject* FindGameObject(string name);
 
 public:
 	Scene() {}
 	virtual ~Scene() {}
 
 };
-
-
-
 

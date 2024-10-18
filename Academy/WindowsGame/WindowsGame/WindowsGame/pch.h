@@ -71,6 +71,7 @@ using namespace std;
 #include "TimeManager.h"
 #include "SceneManager.h"
 #include "ResourceManager.h"
+#include "CollisionManager.h"
 
 
 

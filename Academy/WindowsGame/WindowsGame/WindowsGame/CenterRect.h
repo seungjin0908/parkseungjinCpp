@@ -2,7 +2,7 @@
 enum CenterRectDrawType
 {
 	DRAWTYPE_RECT,
-	DRAWTYPE_ELLIPSE
+	DRAWTYPE_ELIPSE
 };
 /// <summary>
 /// RECT는 left, top, right, bottom를 사용하여,
@@ -14,7 +14,7 @@ struct CenterRect
 	Vector2 pos = { 0, 0 };	//중심좌표
 	float width = 0, height = 0;
 
-	void Draw(HDC hdc);
+	void Draw(HDC hdc, CenterRectDrawType drawType = DRAWTYPE_RECT);
 
 	CenterRect(float x, float y, float width, float height);
 	CenterRect(float x, float y);
@@ -22,7 +22,6 @@ struct CenterRect
 
 	//CenterRect => RECT 구조체로 변경해주는 함수
 	RECT ToRect();
-	static CenterRect FromRect(RECT rc);
 	static CenterRect FromRect(RECT rc);
 	static CenterRect MakeLTWH(float left, float top, float width, float height);
 	float Top();

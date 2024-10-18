@@ -12,7 +12,7 @@ public:
 
 public:
 	void ChangeScene(SceneType sceneType);
-
+	Scene* GetCurrentScene() { return _scene; }
 private:
 	Scene* CreateScene(SceneType sceneType);
 

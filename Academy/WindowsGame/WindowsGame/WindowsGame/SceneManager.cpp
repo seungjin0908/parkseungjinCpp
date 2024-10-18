@@ -4,6 +4,10 @@
 #include "DevScene.h"
 #include "Day17Scene.h"
 #include "Day18Scene.h"
+#include "Day19Scene.h"
+#include "Day20Scene.h"
+#include "Day21Scene.h"
+#include "Day22Scene.h"
 void SceneManager::Init()
 {
 
@@ -75,6 +79,18 @@ Scene* SceneManager::CreateScene(SceneType sceneType)
 		break;
 	case SceneType::Day18Scene:
 		scene = new Day18Scene();
+		break;
+	case SceneType::Day19Scene:
+		scene = new Day19Scene();
+		break;
+	case SceneType::Day20Scene:
+		scene = new Day20Scene();
+		break;
+	case SceneType::Day21Scene:
+		scene = new Day21Scene();
+		break;
+	case SceneType::Day22Scene:
+		scene = new Day22Scene();
 		break;
 	default:
 		break;

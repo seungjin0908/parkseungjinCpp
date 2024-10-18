@@ -8,11 +8,12 @@ Game::Game()
 }
 Game::~Game()
 {
-
+	Resource->Release();
 }
 
 void Game::Init(HWND hWnd)
 {
+	srand(time(NULL));
 	this->_hwnd = hWnd;
 
 	//1. _hdc를 유저에게 보여줄 DC로 받아준다.
@@ -37,13 +38,15 @@ void Game::Init(HWND hWnd)
 
 	Input->Init(_hwnd);
 	Time->Init();
-
+	Resource->Init();
+	GET_SINGLE(CollisionManager)->Init();
 	GET_SINGLE(SceneManager)->Init();
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Day18Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Day22Scene);
 }
 
 void Game::Update()
 {
+	GET_SINGLE(CollisionManager)->Update();
 	Input->Update();
 	Time->Update();
 	GET_SINGLE(SceneManager)->Update();

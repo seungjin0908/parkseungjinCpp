@@ -9,3 +9,18 @@ enum class SceneType
 	Day19Scene,
 	Day21Scnen
 };
+
+enum class ColliderType
+{
+	None,
+	Box,
+	Circle
+};
+
+enum CollisionLayerType : uint8
+{
+	CLT_DEFAULT = 0,
+	CLT_CREATURE,
+	CLT_GROUND,
+	CLT_ITEM
+};

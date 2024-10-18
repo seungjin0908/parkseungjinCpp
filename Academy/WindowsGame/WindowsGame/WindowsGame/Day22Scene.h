@@ -1,7 +1,9 @@
 ﻿#pragma once
 #include "Scene.h"
-class Day20Scene : public Scene
+class Day22Scene : public Scene
 {
+	DECLARE_CHILD(Day22Scene, Scene);
+
 public:
 	virtual void Init() override;
 	virtual void Render(HDC hdc) override;

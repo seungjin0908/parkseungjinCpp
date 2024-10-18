@@ -4,7 +4,7 @@
 class Texture;
 class Sprite : public ResourceBase
 {
-	DELARE_CHILD(Sprite, ResourceBase);
+	DECLARE_CHILD(Sprite, ResourceBase);
 public:
 	Sprite(Texture* texture, int x, int y, int cx, int cy);
 
