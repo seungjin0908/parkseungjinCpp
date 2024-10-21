@@ -148,6 +148,21 @@
     <ClCompile Include="BoxCollider.cpp">
       <Filter>05.Component</Filter>
     </ClCompile>
+    <ClCompile Include="Day21Brick.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxRenderer.cpp">
+      <Filter>05.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Flipbook.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipbookRenderer.cpp">
+      <Filter>05.Component</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -196,6 +211,12 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment16.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment17.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment18.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -306,6 +327,21 @@
       <Filter>03.Scenes\Game</Filter>
     </ClInclude>
     <ClInclude Include="BoxCollider.h">
+      <Filter>05.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Brick.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxRenderer.h">
+      <Filter>05.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Flipbook.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FlipbookRenderer.h">
       <Filter>05.Component</Filter>
     </ClInclude>
   </ItemGroup>

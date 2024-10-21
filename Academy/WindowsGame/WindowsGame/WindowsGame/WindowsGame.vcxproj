@@ -156,6 +156,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="BoxRenderer.cpp" />
     <ClCompile Include="CenterRect.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
@@ -169,10 +170,14 @@
     <ClCompile Include="Day19Stone.cpp" />
     <ClCompile Include="Day20Scene.cpp" />
     <ClCompile Include="Day21Ball.cpp" />
+    <ClCompile Include="Day21Brick.cpp" />
     <ClCompile Include="Day21Paddle.cpp" />
     <ClCompile Include="Day21Scene.cpp" />
     <ClCompile Include="Day22Scene.cpp" />
+    <ClCompile Include="Day23Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
+    <ClCompile Include="Flipbook.cpp" />
+    <ClCompile Include="FlipbookRenderer.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InputManager.cpp" />
@@ -197,6 +202,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BoxCollider.h" />
+    <ClInclude Include="BoxRenderer.h" />
     <ClInclude Include="CenterRect.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="CollisionManager.h" />
@@ -210,12 +216,16 @@
     <ClInclude Include="Day19Stone.h" />
     <ClInclude Include="Day20Scene.h" />
     <ClInclude Include="Day21Ball.h" />
+    <ClInclude Include="Day21Brick.h" />
     <ClInclude Include="Day21Paddle.h" />
     <ClInclude Include="Day21Scene.h" />
     <ClInclude Include="Day22Scene.h" />
+    <ClInclude Include="Day23Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />
     <ClInclude Include="Enums.h" />
+    <ClInclude Include="Flipbook.h" />
+    <ClInclude Include="FlipbookRenderer.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputManager.h" />
@@ -250,6 +260,8 @@
     <None Include="Comment14.md" />
     <None Include="Comment15.md" />
     <None Include="Comment16.md" />
+    <None Include="Comment17.md" />
+    <None Include="Comment18.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
