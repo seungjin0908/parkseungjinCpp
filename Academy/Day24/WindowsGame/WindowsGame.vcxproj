@@ -250,6 +250,7 @@
     <ClCompile Include="Day21Scene.cpp" />
     <ClCompile Include="Day22Scene.cpp" />
     <ClCompile Include="Day23Scene.cpp" />
+    <ClCompile Include="Day24Creature.cpp" />
     <ClCompile Include="Day24Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
@@ -314,6 +315,7 @@
     <ClInclude Include="Day21Scene.h" />
     <ClInclude Include="Day22Scene.h" />
     <ClInclude Include="Day23Scene.h" />
+    <ClInclude Include="Day24Creature.h" />
     <ClInclude Include="Day24Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />

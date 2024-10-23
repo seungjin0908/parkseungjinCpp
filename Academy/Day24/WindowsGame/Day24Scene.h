@@ -10,5 +10,8 @@ public:
 	virtual void Update() override;
 	virtual void Release() override;
 
+private:
+	GameObject* _gameObject = nullptr;
+
 };
 

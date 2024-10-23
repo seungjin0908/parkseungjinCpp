@@ -44,6 +44,9 @@
     <Filter Include="02.Objects\Day21">
       <UniqueIdentifier>{b5b7210f-4b5a-4300-9fb0-2d316b62f108}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Objects\Day24">
+      <UniqueIdentifier>{3b52d7ec-958f-4864-94be-eca56a7c66cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -165,6 +168,9 @@
     </ClCompile>
     <ClCompile Include="Day24Scene.cpp">
       <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Creature.cpp">
+      <Filter>02.Objects\Day24</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -349,6 +355,9 @@
     </ClInclude>
     <ClInclude Include="Day24Scene.h">
       <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Creature.h">
+      <Filter>02.Objects\Day24</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

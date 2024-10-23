@@ -163,6 +163,9 @@
     <ClCompile Include="FlipbookRenderer.cpp">
       <Filter>05.Component</Filter>
     </ClCompile>
+    <ClCompile Include="Day24Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -217,6 +220,9 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment18.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment19.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -343,6 +349,9 @@
     </ClInclude>
     <ClInclude Include="FlipbookRenderer.h">
       <Filter>05.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Scene.h">
+      <Filter>03.Scenes\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
