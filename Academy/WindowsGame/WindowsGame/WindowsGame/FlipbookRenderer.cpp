@@ -8,12 +8,15 @@ void FlipbookRenderer::Init()
 
 void FlipbookRenderer::Render(HDC hdc)
 {
+	Super::Render(hdc);
 }
 
 void FlipbookRenderer::Update()
 {
+	Super::Update();
 }
 
 void FlipbookRenderer::Release()
 {
+	Super::Release();
 }

@@ -1,8 +1,9 @@
 ﻿#pragma once
 #include "Component.h"
-
+#include "Flipbook.h"
 struct FlipbookRendererInfo
 {
+	wstring FlipbookKey;
 	int Index = 0;
 	float SumTime = 0.0f;
 };
@@ -17,6 +18,11 @@ public:
 	virtual void Release();
 
 public:
+	void SetInfo(FlipbookRendererInfo info) { _info = info; }
+	FlipbookRendererInfo GetInfo() { return _info; }
 
+protected:
+	FlipbookRendererInfo _info;
+	Flipbook* _flipbook = nullptr;
 };
 

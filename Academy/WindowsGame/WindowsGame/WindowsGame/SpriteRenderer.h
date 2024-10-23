@@ -20,7 +20,8 @@ public:
 public:
 	void SetInfo(SpriteRendererInfo info) { _info = info; }
 
-
+protected:
+	SpriteRendererInfo _info;
 
 
 };
