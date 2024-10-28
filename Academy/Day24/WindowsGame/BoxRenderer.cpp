@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 #include "BoxRenderer.h"
 #include "GameObject.h"
-
+#include "Scene.h"
 void BoxRenderer::Init()
 {
 	Super::Init();
@@ -9,6 +9,8 @@ void BoxRenderer::Init()
 void BoxRenderer::Render(HDC hdc)
 {
 	Super::Render(hdc);
+
+	Vector2 cameraPos = CurrentScene->GetCameraPos();
 	this->GetOwner()->GetBody().Draw(hdc, DRAWTYPE_RECT, _info.Brush);
 }
 void BoxRenderer::Update()

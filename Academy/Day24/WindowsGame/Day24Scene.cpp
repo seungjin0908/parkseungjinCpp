@@ -1,11 +1,18 @@
 ﻿#include "pch.h"
 #include "Day24Scene.h"
-#include "GameObject.h"
-#include "BoxRenderer.h"
+#include "Day24Creature.h"
+#include "Day24Bullet.h"
 #include "SpriteRenderer.h"
+#include "BoxRenderer.h"
 void Day24Scene::Init()
 {
 	Super::Init();
+	Texture* backgroundTexture = Resource->LoadTexture(L"T_Background", L"Day24/Background.bmp");
+	Resource->CreateSprite(L"S_Background", backgroundTexture);
+	{
+		GameObject* gameObject = new GameObject();
+		gameObject->SetBody(CenterRect::MakeLTWH(0, 0, 1365, 616));
+	}
 	{
 		Texture* texture = Resource->LoadTexture(L"T_Ball", L"Day24/playerDown.bmp");
 		Resource->CreateSprite(L"S_Ball", texture,0,0,200,200);

@@ -48,3 +48,4 @@ public:											\
 
 
 #define Alert(title, message) MessageBox(_hWnd, message, title, NULL)
+#define CurrentScene (GET_SINGLE(SceneManager)->GetCurrentScene())

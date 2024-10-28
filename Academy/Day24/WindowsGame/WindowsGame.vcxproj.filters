@@ -172,6 +172,15 @@
     <ClCompile Include="Day24Creature.cpp">
       <Filter>02.Objects\Day24</Filter>
     </ClCompile>
+    <ClCompile Include="CameraComponent.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Bullet.cpp">
+      <Filter>02.Objects\Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Enemy.cpp">
+      <Filter>02.Objects\Day24</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -226,6 +235,12 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment18.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment20.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment21.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -357,6 +372,15 @@
       <Filter>03.Scenes\Game</Filter>
     </ClInclude>
     <ClInclude Include="Day24Creature.h">
+      <Filter>02.Objects\Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraComponent.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Bullet.h">
+      <Filter>02.Objects\Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Enemy.h">
       <Filter>02.Objects\Day24</Filter>
     </ClInclude>
   </ItemGroup>
