@@ -4,7 +4,7 @@
 #include "Sprite.h"
 #include "ResourceBase.h"
 #include "Flipbook.h"
-
+#include "Tilemap.h"
 void ResourceManager::Init()
 {
 	_resources.clear();
@@ -88,4 +88,21 @@ Flipbook* ResourceManager::CreateFlipbook(const wstring& key, FlipbookInfo info)
 Flipbook* ResourceManager::GetFlipbook(const wstring& key)
 {
 	return dynamic_cast<Flipbook*>(_resources[key]);
+}
+
+Tilemap* ResourceManager::LoadTilemap(const wstring& key, const wstring& path)
+{
+	if (_resources.contains(key)
+	{
+		return GetTilemap(key);
+	}
+
+	Tilemap* tilemap=new Tilemap();
+	tile
+	return tilemap;
+}
+
+Tilemap* ResourceManager::GetTilemap(const wstring& key)
+{
+	return nullptr;
 }

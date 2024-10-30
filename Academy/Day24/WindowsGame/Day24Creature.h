@@ -4,7 +4,8 @@
 enum class Day24CreatureState
 {
 	Idle,
-	Move
+	Move,
+	Attack
 };
 
 enum class Day24CreatureDir
@@ -30,9 +31,15 @@ public:
 
 	void SetFlipbook();
 
+	void Update_Move();
+	void Update_Idle();
 private:
 	Day24CreatureState _state = Day24CreatureState::Idle;
 	Day24CreatureDir _dir = Day24CreatureDir::Down;
 	FlipbookRenderer* _flipbookRenderer = nullptr;
+	Vector2 _inputDir = {};
+
+	bool _isAttacked = false;
+	Vector2 _ShootDir = {};
 };
 

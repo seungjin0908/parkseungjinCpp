@@ -72,4 +72,5 @@ void FlipbookRenderer::SetInfo(FlipbookRendererInfo info)
 {
 	_info = info;
 	_flipbook = Resource->GetFlipbook(info.FlipbookKey);
+	_info.LastIndex = _flipbook->GetInfo().End;
 }

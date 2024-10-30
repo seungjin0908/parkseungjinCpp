@@ -28,9 +28,16 @@ public:
 
 public:
 	void SetState(EDay24EnemyState state);
+	void SetInfo(Day24EnemyInfo info) { _info = info; }
 
+public:
+	virtual void OnDamaged(Day24Bullet* bullet);
+
+public:
+	virtual void OnTriggerEnter(Collider* collider, Collider* other);
+	
 private:
 	EDay24EnemyState _state;
-	Day24EnemyInfo _
+	Day24EnemyInfo _info;
 };
 

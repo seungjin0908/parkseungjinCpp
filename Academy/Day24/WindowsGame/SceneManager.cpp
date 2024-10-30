@@ -10,7 +10,7 @@
 #include "Day22Scene.h"
 #include "Day23Scene.h"
 #include "Day24Scene.h"
-
+#include "Day26Scene.h"
 void SceneManager::Init()
 {
 
