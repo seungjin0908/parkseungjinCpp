@@ -11,7 +11,7 @@ class Tilemap :  public ResourceBase
 	DECLARE_CHILD(Tilemap, ResourceBase);
 
 public:
-	//void SaveFile(const wstring& path);
+	void SaveFile(const wstring& path);
 	void LoadFile(const wstring& path);
 
 public:
@@ -24,6 +24,9 @@ public:
 	Tile GetTileAt(Vector2Int pos) { return _tiles[pos.y][pos.x]; }
 	void SetTiles(vector<vector<Tile>>tiles) { _tiles = tiles; }
 
+	void SetSprites(vector<Sprite*> sprites);
+
+
 public:
 	void Render(HDC hdc, int x, int y);
 
@@ -34,8 +37,6 @@ protected:
 	Vector2Int _tileSize = {};
 
 	// 2차원 배열로 타일리스트를 들고있어야함
-	vector<vector<Tile>> _tiles;
-
 	vector<vector<Tile>> _tiles;
 
 	vector<Sprite*> _sprites;

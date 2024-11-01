@@ -187,6 +187,12 @@
     <ClCompile Include="Day26Scene.cpp">
       <Filter>03.Scenes\Game</Filter>
     </ClCompile>
+    <ClCompile Include="TilemapRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day27Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -253,6 +259,9 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment23.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment24.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -399,6 +408,12 @@
       <Filter>04.Resources</Filter>
     </ClInclude>
     <ClInclude Include="Day26Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TilemapRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day27Scene.h">
       <Filter>03.Scenes\Game</Filter>
     </ClInclude>
   </ItemGroup>
