@@ -145,6 +145,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pch.h</PrecompiledHeaderFile>
     </ClCompile>
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PriorityQueue.cpp" />
     <ClCompile Include="Vector2Int.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +154,8 @@
     <ClInclude Include="ConsoleHelper.h" />
     <ClInclude Include="Graph.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PriorityQueue.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Vector2Int.h" />
   </ItemGroup>
@@ -161,6 +165,8 @@
     <None Include="Comment02[정점세팅].md" />
     <None Include="Comment04.md" />
     <None Include="Comment05.md" />
+    <None Include="Comment06.md" />
+    <None Include="Comment07.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,10 +5,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Comment">
       <UniqueIdentifier>{caf801c7-0045-4a85-9205-d57711f36e0a}</UniqueIdentifier>
     </Filter>
@@ -35,6 +31,12 @@
     <ClCompile Include="MazeMain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PriorityQueue.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector2Int.h">
@@ -55,6 +57,12 @@
     <ClInclude Include="Board.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="PriorityQueue.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -70,6 +78,12 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment05.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment06.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment07.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>

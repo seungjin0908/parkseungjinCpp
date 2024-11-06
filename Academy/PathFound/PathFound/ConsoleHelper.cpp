@@ -1,6 +1,7 @@
 ﻿#include "pch.h"
 #include "ConsoleHelper.h"
 
+
 void ConsoleHelper::SetCursorPosition(int32 x, int32 y)
 {
 	HANDLE output = ::GetStdHandle(STD_OUTPUT_HANDLE);
@@ -10,12 +11,16 @@ void ConsoleHelper::SetCursorPosition(int32 x, int32 y)
 	};
 	::SetConsoleCursorPosition(output, pos);
 }
-
 void ConsoleHelper::SetCursorColor(ConsoleColor color)
 {
-	HANDLE output=::SetCursorColor
+	HANDLE output = ::GetStdHandle(STD_OUTPUT_HANDLE);
+	::SetConsoleTextAttribute(output, static_cast<WORD>(color));
 }
-
 void ConsoleHelper::ShowConsoleCursor(bool flag)
 {
+	HANDLE output = ::GetStdHandle(STD_OUTPUT_HANDLE);
+	CONSOLE_CURSOR_INFO cursorInfo;
+	::GetConsoleCursorInfo(output, &cursorInfo);
+	cursorInfo.bVisible = flag;
+	::SetConsoleCursorInfo(output, &cursorInfo);
 }
