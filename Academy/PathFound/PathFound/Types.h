@@ -15,8 +15,55 @@ struct Node
 	Vector2Int Pos;
 	Vector2Int ParentPos;
 
-	Node(Vector2Int Pos, Vector2Int parentPos)
+	Node(Vector2Int pos, Vector2Int parentPos)
 	{
-		
+		Pos = pos;
+		ParentPos = parentPos;
+	}
+};
+
+struct PQNode
+{
+	Vector2Int Pos;
+	float Cost;
+
+	PQNode(Vector2Int pos, float cost)
+	{
+		Pos = pos;
+		Cost = cost;
+	}
+
+	bool operator< (const PQNode& other) const
+	{
+		return Cost < other.Cost;
+	}
+
+	bool operator> (const PQNode& other) const
+	{
+		return Cost > other.Cost;
+	}
+};
+
+struct AstarNode
+{
+	Vector2Int Pos;
+	float G;		// 내가 걸어온 길
+	float H;		// 남은 길
+
+	AstarNode(Vector2Int pos, float g, float h)
+	{
+		Pos = pos;
+		G = g;
+		H = h;
+	}
+
+	float GetCost() const
+	{
+		return G + H;
+	}
+
+	bool operator< (const AstarNode& other) const
+	{
+		return this->GetCost
 	}
 };

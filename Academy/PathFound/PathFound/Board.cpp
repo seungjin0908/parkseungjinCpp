@@ -4,6 +4,7 @@
 #include "Player.h"
 void Board::Init(Player* player)
 {
+	_player = player;
 	_size = 25;
 
 	_mapInfo = vector<vector<TileType>>(_size,
@@ -30,9 +31,9 @@ void Board::GenerateMap()
 	}
 
 	//랜덤으로 우측 혹은 아래로 길을 뚫는 작업
-	for (int y = 0; y < _size - 1; y++)
+	for (int y = 0; y < _size; y++)
 	{
-		for (int x = 0; x < _size - 1; x++)
+		for (int x = 0; x < _size; x++)
 		{
 			// 벽지점은 안뚫도록 체크
 			if (x % 2 == 0 || y % 2 == 0)
@@ -43,8 +44,10 @@ void Board::GenerateMap()
 			//맨 아래에서는 하단벽 못지우게
 			if (y == _size - 2)
 			{
-				
-				_mapInfo[y][x + 1] = TileType::Empty;
+				if (x != _size - 2)
+				{
+					_mapInfo[y][x + 1] = TileType::Empty;
+				}
 				continue;
 			}
 
@@ -69,11 +72,12 @@ void Board::GenerateMap()
 		}
 	}
 
-	// 1,1 위치를 startPos
-	// _size-2, size-2을 exitPos
+	// 1, 1 위치를 startPos
+	// _size-2, size-2 을 _exitPos
 	_startPos = Vector2Int(1, 1);
 	_exitPos = Vector2Int(_size - 2, _size - 2);
 }
+
 void Board::Render()
 {
 	ConsoleHelper::SetCursorPosition(0, 0);
@@ -83,13 +87,19 @@ void Board::Render()
 	{
 		for (int x = 0; x < _size; x++)
 		{
-			if (Vector2Int(x, y) == _startPos)
+			if (Vector2Int(x, y) == _player->GetPos())
+			{
+				ConsoleHelper::SetCursorColor(ConsoleColor::BLACK);
+				cout << "■";
+				continue;
+			}
+			else if (Vector2Int(x, y) == _startPos)
 			{
 				ConsoleHelper::SetCursorColor(ConsoleColor::PURPLE);
 				cout << "■";
 				continue;
 			}
-			else if (Vector2Int(x, y) == _startPos)
+			else if (Vector2Int(x, y) == _exitPos)
 			{
 				ConsoleHelper::SetCursorColor(ConsoleColor::PURPLE);
 				cout << "■";

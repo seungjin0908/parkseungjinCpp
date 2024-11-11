@@ -5,7 +5,8 @@ enum class TileType
 	Wall,
 	Empty
 };
-class Board;
+
+class Player;
 class Board
 {
 public:
@@ -21,6 +22,7 @@ public:
 	Vector2Int GetStartPos() { return _startPos; }
 	Vector2Int GetExitPos() { return _exitPos; }
 	TileType GetTileType(int x, int y) { return _mapInfo[y][x]; }
+	int GetSize() { return _size; }
 
 private:
 	int _size = 0;

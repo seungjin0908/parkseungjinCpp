@@ -6,9 +6,9 @@ enum class EDir
 	Up,
 	Right,
 	Down,
-	
 };
 
+class Board;
 class Player
 {
 public:
@@ -22,6 +22,8 @@ public:
 	void CalulatePath_RightHand();
 	void CalulatePath_BFS();
 	void CalulatePath_DFS();
+	void CalulatePath_Dijkstra();
+	void CalulatePath_Astar();
 
 public:
 	Player() {}
@@ -31,8 +33,11 @@ private:
 	Vector2Int _pos = {};
 	EDir _dir = EDir::Right;
 
-	Board * _board = nullptr;
+	Board* _board = nullptr;
 
-	vector<>
+
+	// 길찾기 알고리즘 후에 저장될 경로.
+	vector<Vector2Int> _path = {};
+	int _currentIndex = 0;
 };
 

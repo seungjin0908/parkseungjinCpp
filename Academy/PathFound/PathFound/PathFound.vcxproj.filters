@@ -37,6 +37,9 @@
     <ClCompile Include="PriorityQueue.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="PriorityTest.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector2Int.h">
@@ -84,6 +87,9 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment07.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment08.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
