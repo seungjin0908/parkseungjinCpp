@@ -227,6 +227,7 @@
     <None Include="Comment07.md">
       <FileType>Document</FileType>
     </None>
+    <ClCompile Include="AstarNode.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="BoxRenderer.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
@@ -256,6 +257,7 @@
     <ClCompile Include="Day24Enemy.cpp" />
     <ClCompile Include="Day24Scene.cpp" />
     <ClCompile Include="Day26Scene.cpp" />
+    <ClCompile Include="Day27Creature.cpp" />
     <ClCompile Include="Day27Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
@@ -302,8 +304,12 @@
     <None Include="Comment22.md" />
     <None Include="Comment23.md" />
     <None Include="Comment24.md" />
+    <None Include="Comment25[길찾기 알고리].md" />
+    <None Include="Comment26.md" />
+    <None Include="Comment27.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AstarNode.h" />
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="BoxRenderer.h" />
     <ClInclude Include="CameraComponent.h" />
@@ -333,6 +339,7 @@
     <ClInclude Include="Day24Enemy.h" />
     <ClInclude Include="Day24Scene.h" />
     <ClInclude Include="Day26Scene.h" />
+    <ClInclude Include="Day27Creature.h" />
     <ClInclude Include="Day27Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />

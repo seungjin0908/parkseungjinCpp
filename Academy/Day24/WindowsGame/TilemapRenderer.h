@@ -13,5 +13,7 @@ public:
 	virtual void Render(HDC hdc);
 	virtual void Update();
 	virtual void Release();
+
+public:
 };
 

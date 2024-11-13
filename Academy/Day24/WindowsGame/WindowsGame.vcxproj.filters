@@ -47,6 +47,9 @@
     <Filter Include="02.Objects\Day24">
       <UniqueIdentifier>{3b52d7ec-958f-4864-94be-eca56a7c66cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.Objects\Day27">
+      <UniqueIdentifier>{0be15617-c2ba-4a3d-ace3-09a95fbf1fef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -193,6 +196,12 @@
     <ClCompile Include="Day27Scene.cpp">
       <Filter>03.Scenes\Game</Filter>
     </ClCompile>
+    <ClCompile Include="Day27Creature.cpp">
+      <Filter>02.Objects\Day27</Filter>
+    </ClCompile>
+    <ClCompile Include="AstarNode.cpp">
+      <Filter>99.Utils\Types</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -262,6 +271,15 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment24.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment25[길찾기 알고리].md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment26.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment27.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -415,6 +433,12 @@
     </ClInclude>
     <ClInclude Include="Day27Scene.h">
       <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day27Creature.h">
+      <Filter>02.Objects\Day27</Filter>
+    </ClInclude>
+    <ClInclude Include="AstarNode.h">
+      <Filter>99.Utils\Types</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

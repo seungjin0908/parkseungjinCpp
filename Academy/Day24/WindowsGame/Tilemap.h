@@ -22,7 +22,9 @@ public:
 	void SetTileSize(Vector2Int tileSize) { _tileSize = tileSize; }
 
 	Tile GetTileAt(Vector2Int pos) { return _tiles[pos.y][pos.x]; }
+	void SetTileAt(Vector2Int pos, Tile tile) { _tiles[pos.y][pos.x]=tile; }
 	void SetTiles(vector<vector<Tile>>tiles) { _tiles = tiles; }
+	
 
 	void SetSprites(vector<Sprite*> sprites);
 

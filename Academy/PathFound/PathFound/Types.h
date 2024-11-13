@@ -1,5 +1,4 @@
 ﻿#pragma once
-
 using int8 = __int8;
 using int16 = __int16;
 using int32 = __int32;
@@ -8,6 +7,7 @@ using uint8 = unsigned __int8;
 using uint16 = unsigned __int16;
 using uint32 = unsigned __int32;
 using uint64 = unsigned __int64;
+
 #include "Vector2Int.h"
 
 struct Node
@@ -21,6 +21,7 @@ struct Node
 		ParentPos = parentPos;
 	}
 };
+
 
 struct PQNode
 {
@@ -44,11 +45,12 @@ struct PQNode
 	}
 };
 
+
 struct AstarNode
 {
 	Vector2Int Pos;
-	float G;		// 내가 걸어온 길
-	float H;		// 남은 길
+	float G;	// 내가 걸어온길
+	float H;	// 남은 길
 
 	AstarNode(Vector2Int pos, float g, float h)
 	{
@@ -57,13 +59,18 @@ struct AstarNode
 		H = h;
 	}
 
-	float GetCost() const
+	float GetCost()	const
 	{
 		return G + H;
 	}
 
 	bool operator< (const AstarNode& other) const
 	{
-		return this->GetCost
+		return this->GetCost() < other.GetCost();
+	}
+
+	bool operator> (const AstarNode& other) const
+	{
+		return this->GetCost() > other.GetCost();
 	}
 };

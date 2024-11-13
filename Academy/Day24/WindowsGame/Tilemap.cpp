@@ -63,6 +63,8 @@ void Tilemap::LoadFile(const wstring& path)
 	
 }
 
+
+
 void Tilemap::Render(HDC hdc, int x, int y)
 {
 	int startX = 0, startY = 0;
@@ -97,4 +99,7 @@ void Tilemap::Render(HDC hdc, int x, int y)
 	}
 }
 
+void Tilemap::SetSprites(vector<Sprite*> sprites)
+{
 
+}

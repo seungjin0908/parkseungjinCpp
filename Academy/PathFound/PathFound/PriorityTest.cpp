@@ -20,25 +20,39 @@ struct PQNode
 
 void main()
 {
-	PriorityQueue<int> p;
+	/*PriorityQueue<PQNode> p;
 	{
-		PQNode node = { 1,1,3 };
+		PQNode node = { 1, 1, 3 };
+		p.Push(node);
 	}
-
-	/*p.Push(30);
-	p.Push(50);
-	p.Push(10);
-	p.Push(5);
-	p.Push(3);
-	p.Push(1);
-	p.Push(100);
-	p.Push(300);
-	p.Push(500);*/
-
+	{
+		PQNode node = { 2, 1, 5 };
+		p.Push(node);
+	}
+	{
+		PQNode node = { 1, 2, 10 };
+		p.Push(node);
+	}
+	{
+		PQNode node = { 2, 2, 50 };
+		p.Push(node);
+	}
 	while (false == p.Empty())
 	{
-		cout << "Top : " << p.Peek() << endl;
-
+		cout << "Top : " << p.Peek().cost << endl;
 		p.Pop();
-	}
+	}*/
+
+
+
+	//priority_queue<int, vector<int>, greater<int>> q;
+	//priority_queue<int> q;
+	/*q.push(10);
+	q.push(30);
+	q.push(50);
+	while (false == q.empty())
+	{
+		cout << "Top : " << q.top() << endl;
+		q.pop();
+	}*/
 }

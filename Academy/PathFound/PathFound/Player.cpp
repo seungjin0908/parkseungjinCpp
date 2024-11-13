@@ -14,6 +14,7 @@ void Player::Init(Board* board)
 	//CalulatePath_DFS();
 	//CalulatePath_Dijkstra();
 	CalulatePath_Astar();
+
 	_currentIndex = 0;
 }
 void Player::Update()
@@ -306,9 +307,9 @@ void Player::CalulatePath_DFS()
 
 void Player::CalulatePath_Dijkstra()
 {
-	// <nodeType, containerType, 비교 방법(greator or less)>
+	//<nodeType, containerType, 비교 방법(greater or less)>
 	priority_queue<PQNode, vector<PQNode>, greater<PQNode>> q;
-	Vector2Int dest = _board->GetExitPos();
+
 	int frontSize = 8;
 	Vector2Int front[8] =
 	{
@@ -322,7 +323,7 @@ void Player::CalulatePath_Dijkstra()
 		,Vector2Int(1, -1)
 	};
 
-	int cost[8] =
+	float cost[8] =
 	{
 		1,
 		1,
@@ -334,10 +335,13 @@ void Player::CalulatePath_Dijkstra()
 		1.4f,
 	};
 
+	//목적지
+	Vector2Int dest = _board->GetExitPos();
 	int size = _board->GetSize();
 	vector<vector<bool>> visited = vector<vector<bool>>(size, vector<bool>(size, false));
-	vector<vector<PQNode>> parents = vector<vector<PQNode>>(size, vector<PQNode>(size, PQNode(Vector2Int(-1, -1),1000000000)));
+	vector<vector<PQNode>> parents = vector<vector<PQNode>>(size, vector<PQNode>(size, PQNode(Vector2Int(-1, -1), 100000000)));
 
+	//초기값 설정
 	{
 		PQNode startNode = PQNode(_board->GetStartPos(), 0);
 		q.push(startNode);
@@ -345,20 +349,23 @@ void Player::CalulatePath_Dijkstra()
 
 	while (false == q.empty())
 	{
+		// 1. 제일 좋은 후보를 가져온다
 		PQNode node = q.top();
 		q.pop();
 
+		// 2. 만약에 방문한 노드면 스킵
 		if (true == visited[node.Pos.y][node.Pos.x])
 		{
 			continue;
 		}
 
-		if (parents[node.Pos.y][node.Pos.x].Cost < node.Cost)
-		{
-			continue;
-		}
+		//// 3. 만약에 나보다 더 우수한 후보가 있으면 패스
+		//if (parents[node.Pos.y][node.Pos.x].Cost < node.Cost)
+		//{
+		//	continue;
+		//}
 
-		// 4.
+		// 4. 방문 후 처리 이후
 		visited[node.Pos.y][node.Pos.x] = true;
 
 		// 5. 도착지면 break;
@@ -367,22 +374,25 @@ void Player::CalulatePath_Dijkstra()
 			break;
 		}
 
+
+		// 6. 갈수있는곳은 모두 큐에 추가
 		for (int i = 0; i < frontSize; i++)
 		{
 			Vector2Int nextPos = node.Pos + front[i];
 
 			if (CanGo(nextPos) && visited[nextPos.y][nextPos.x] == false)
 			{
-
-				if (node.Cost + cost[i] < parents[node.Pos.y][node.Pos.x].Cost)
+				// 내가 더 싸면 추가
+				if (node.Cost + cost[i] < parents[nextPos.y][nextPos.x].Cost)
 				{
-					parents[node.Pos.y][node.Pos.x] = node;
+					parents[nextPos.y][nextPos.x] = PQNode(node.Pos, node.Cost + cost[i]);
 				}
 				PQNode newNode = PQNode(nextPos, node.Cost + cost[i]);
 				q.push(newNode);
 			}
 		}
 	}
+
 
 	// 여기까지 다익스트라 알고리즘 끝이고
 	// 이 이후부터는 플레이어움직임을 위해서 역계산
@@ -397,17 +407,134 @@ void Player::CalulatePath_Dijkstra()
 		{
 			_path.push_back(pos);
 
-			if (pos == parents[pos.y][pos.x].Pos)
+			//포지션이 시작지점이 될때까지 반복
+			if (pos == _board->GetStartPos())
 			{
 				break;
 			}
 
-			pos = parents[pos.y][pos.x];
+			pos = parents[pos.y][pos.x].Pos;
 		}
 	}
+
+	std::reverse(_path.begin(), _path.end());
 }
 
 void Player::CalulatePath_Astar()
 {
+	//<nodeType, containerType, 비교 방법(greater or less)>
+	priority_queue<AstarNode, vector<AstarNode>, greater<AstarNode>> q;
 
+	int frontSize = 8;
+	Vector2Int front[8] =
+	{
+		Vector2Int(-1, 0)	// Left
+		,Vector2Int(0, -1)	// Up
+		,Vector2Int(1, 0)	// Right
+		,Vector2Int(0, 1)	// Down
+		,Vector2Int(-1, 1)
+		,Vector2Int(-1, -1)
+		,Vector2Int(1, 1)
+		,Vector2Int(1, -1)
+	};
+
+	float cost[8] =
+	{
+		1,
+		1,
+		1,
+		1,
+		1.4f,
+		1.4f,
+		1.4f,
+		1.4f,
+	};
+
+	//목적지
+	Vector2Int dest = _board->GetExitPos();
+	int size = _board->GetSize();
+	vector<vector<bool>> visited = vector<vector<bool>>(size, vector<bool>(size, false));
+	vector<vector<AstarNode>> parents = vector<vector<AstarNode>>(size, vector<AstarNode>(size, AstarNode(Vector2Int(-1, -1), 99999, 99999)));
+
+	//초기값 설정
+	{
+		// 예상거리는 그냥 도착지 - 내현재 포지션
+		float h = (dest - _board->GetStartPos()).Length();
+		AstarNode startNode = AstarNode(_board->GetStartPos(), 0, h);
+		q.push(startNode);
+	}
+
+	while (false == q.empty())
+	{
+		// 1. 제일 좋은 후보를 가져온다
+		AstarNode node = q.top();
+		q.pop();
+
+		// 2. 만약에 방문한 노드면 스킵
+		if (true == visited[node.Pos.y][node.Pos.x])
+		{
+			continue;
+		}
+
+		//// 3. 만약에 나보다 더 우수한 후보가 있으면 패스
+		//if (parents[node.Pos.y][node.Pos.x].Cost < node.Cost)
+		//{
+		//	continue;
+		//}
+
+		// 4. 방문 후 처리 이후
+		visited[node.Pos.y][node.Pos.x] = true;
+
+		// 5. 도착지면 break;
+		if (node.Pos == dest)
+		{
+			break;
+		}
+
+
+		// 6. 갈수있는곳은 모두 큐에 추가
+		for (int i = 0; i < frontSize; i++)
+		{
+			Vector2Int nextPos = node.Pos + front[i];
+
+			if (CanGo(nextPos) && visited[nextPos.y][nextPos.x] == false)
+			{
+				float h = (dest - nextPos).Length();
+				// 내가 더 싸면 추가
+				if (node.G + cost[i] + h < parents[nextPos.y][nextPos.x].GetCost())
+				{
+					parents[nextPos.y][nextPos.x] = AstarNode(node.Pos, node.G + cost[i], h);
+				}
+
+				AstarNode newNode = AstarNode(nextPos, node.G + cost[i], h);
+				q.push(newNode);
+			}
+		}
+	}
+
+
+	// 여기까지 다익스트라 알고리즘 끝이고
+	// 이 이후부터는 플레이어움직임을 위해서 역계산
+	// path 역계산
+	_path.clear();
+
+	//if (visited[dest.y][dest.x] == true)
+	{
+		Vector2Int pos = dest;
+
+		while (true)
+		{
+			_path.push_back(pos);
+
+			//포지션이 시작지점이 될때까지 반복
+			if (pos == _board->GetStartPos())
+			{
+				break;
+			}
+
+			pos = parents[pos.y][pos.x].Pos;
+		}
+	}
+
+	std::reverse(_path.begin(), _path.end());
 }
