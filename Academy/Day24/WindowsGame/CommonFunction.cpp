@@ -79,4 +79,27 @@ namespace Collision
 
 		return false;
 	}
+
+	bool RectInCircle(CenterRect centerRect, Vector2 pos, float radius)
+	{
+		float dx = abs(centerRect.pos.x - pos.x);
+		float dy = abs(centerRect.pos.y - pos.y);
+
+		float distX = dx - centerRect.width / 2;
+		float distY = dy - centerRect.height / 2;
+
+		if (distX > radius || distY > radius)
+		{
+			return false;
+		}
+
+		if (distX <= 0 || distY <= 0)
+		{
+			return true;
+		}
+
+		float cornerDistanceSqrt = (distX * distY) + (distY * distY);
+
+		return cornerDistanceSqrt <= (radius * radius);
+	}
 }

@@ -144,3 +144,43 @@ Vector2 Vector2::Normalize()
 
 	return Vector2(x / length, y / length);
 }
+
+float Vector2::SignedAngle(const Vector2 from, const Vector2 to)
+{
+	/*
+	공식
+		내적 = |A| |B|cos(theta)
+		외적 = |A| |B|sin(theta)
+
+		=> 방향벡터로 모두 빗변의 길이가 1이라고 가정하였을때,
+		내적 = 밑변
+		외적 = 높이
+
+		tan(theta) = 외적 / 내적
+
+		각도 = atan2(외적, 내적);
+
+		여기서 나오는 각도는 라디안
+
+		// 라디안 : 파이(3.141592)를 180도라고 지정하였을때의 값
+	*/
+
+	Vector2 fromVec = from;
+	Vector2 toVec = to;
+
+	fromVec = fromVec.Normalize();
+	toVec = toVec.Normalize();
+
+	float dot = fromVec.Dot(toVec);
+	// 외적 = x1 * x2
+	float det = fromVec.x * from.y - toVec.x * toVec.y;
+
+	float angle = atan2(det, dot);
+
+	return Rad2Deg(angle);
+}
+
+float Vector2::SignedAngle(const Vector2 to)
+{
+	return Vector2::SignedAngle(*this, to);
+}

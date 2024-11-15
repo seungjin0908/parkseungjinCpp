@@ -232,6 +232,7 @@
     <ClCompile Include="BoxRenderer.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="CenterRect.cpp" />
+    <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="CommonFunction.cpp" />
@@ -307,6 +308,8 @@
     <None Include="Comment25[길찾기 알고리].md" />
     <None Include="Comment26.md" />
     <None Include="Comment27.md" />
+    <None Include="Comment28.md" />
+    <None Include="Comment29.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AstarNode.h" />
@@ -314,6 +317,7 @@
     <ClInclude Include="BoxRenderer.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="CenterRect.h" />
+    <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="CommonFunction.h" />

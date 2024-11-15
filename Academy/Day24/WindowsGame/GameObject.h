@@ -6,6 +6,7 @@ protected:
 	CenterRect _body = {};
 	string _name;
 	vector<Component*> _components;
+	LayerType _layerType = LayerType::Object;
 
 public:
 	//게터, 세터
@@ -23,6 +24,9 @@ public:
 
 	inline void SetHeight(float height) { _body.height = height; }
 	inline float GetHeight() { return _body.height; }
+
+	inline void SetLayerType(LayerType layerType) { _layerType = layerType; }
+	inline LayerType GetLayerType() { return _layerType; }
 
 public:
 	virtual void Init();

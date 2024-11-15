@@ -28,3 +28,14 @@ enum CollisionLayerType
 	CLT_GROUND,
 	CLT_ITEM
 };
+
+enum class LayerType
+{
+	BackGround,
+	Object,
+	Character,
+	WorldUI,
+
+
+	End
+};

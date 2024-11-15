@@ -53,24 +53,15 @@ void Day27Scene::Render(HDC hdc)
 void Day27Scene::Update()
 {
 	Super::Update();
+	
+	//Update_MapTool();
+	Update_CharacterMove();
 
 
-	if (Input->GetKeyDown(KeyCode::LeftMouse))
+	if (Input->GetKeyDown(KeyCode::K))
 	{
-		// 해당 위치의 타일을 가져온다.
-		_tilemap* tilemap = _tilemapRenderer.getInfo(), Tilemap;
-		if (Tilemap == nullptr)
-		{
-			return;
-		}
-		// 2. 해당 타일의 값을 1올린다.
-		
-		// 3. 해당 타일을 가져온다.
-	}
-
-	if (Input->GetKeyDown(KeyCode::S))
-	{
-
+		Vector2 v1 = Vector2(0, 1);
+		Vector2 v2 = Vector2(1, 1).Normalize();
 	}
 }
 

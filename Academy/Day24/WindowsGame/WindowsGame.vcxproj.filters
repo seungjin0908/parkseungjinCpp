@@ -202,6 +202,9 @@
     <ClCompile Include="AstarNode.cpp">
       <Filter>99.Utils\Types</Filter>
     </ClCompile>
+    <ClCompile Include="CircleCollider.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -280,6 +283,12 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment27.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment28.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment29.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -439,6 +448,9 @@
     </ClInclude>
     <ClInclude Include="AstarNode.h">
       <Filter>99.Utils\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollider.h">
+      <Filter>05.Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

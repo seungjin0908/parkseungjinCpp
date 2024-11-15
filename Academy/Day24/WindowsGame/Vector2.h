@@ -70,6 +70,9 @@ struct Vector2
 	Vector2 Reflect(Vector2 normal);
 	static Vector2 Reflect(Vector2 origin, Vector2 normal);
 
+	static float SignedAngle(const Vector2 from, const Vector2 to);
+	float SignedAngle(const Vector2 to);
+
 	//magnitude
 	float LengthSqrt();
 	float Length();

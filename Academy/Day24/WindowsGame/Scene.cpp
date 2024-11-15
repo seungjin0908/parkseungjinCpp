@@ -3,15 +3,22 @@
 #include "GameObject.h"
 void Scene::Init()
 {
-
+	
 }
 void Scene::Render(HDC hdc)
 {
-	for (GameObject* gameObject : _gameObjects)
+	{
+		for (int layer = 0; layer < static_cast<int>(LayerType::End); layer++)
+		{
+
+		}
+	}
+
+	/*for (GameObject* gameObject : _gameObjects)
 	{
 		if (gameObject == nullptr) continue;
 		gameObject->Render(hdc);
-	}
+	}*/
 }
 void Scene::Update()
 {

@@ -3,7 +3,7 @@ class GameObject;
 class Scene
 {
 protected:
-	vector<GameObject*> _gameObjects;
+	vector<GameObject*> _gameObjects[static_cast<int>(LayerType::End)];
 	queue<GameObject*> _despawnObjectList;
 	Vector2 _cameraPosition;
 	CenterRect _cameraArea = {};

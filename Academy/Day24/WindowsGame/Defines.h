@@ -37,6 +37,9 @@ public:										\
 
 // (0.000001)
 #define EPSILON 1e-6f
+
+#define Rad2Deg(x) (57.2957 * x)
+#define Deg2Rad(x) (0.017453 * x)
 #define EQUALS(a, b) (abs(a - b) < EPSILON)
 
 
