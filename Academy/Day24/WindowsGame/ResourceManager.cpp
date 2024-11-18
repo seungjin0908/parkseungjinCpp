@@ -5,6 +5,7 @@
 #include "ResourceBase.h"
 #include "Flipbook.h"
 #include "Tilemap.h"
+#include "Sound.h"
 void ResourceManager::Init()
 {
 	_resources.clear();
@@ -103,6 +104,16 @@ Tilemap* ResourceManager::LoadTilemap(const wstring& key, const wstring& path)
 }
 
 Tilemap* ResourceManager::GetTilemap(const wstring& key)
+{
+	return nullptr;
+}
+
+Sound* ResourceManager::LoadSound(const wstring& sound, const wstring& path)
+{
+	return nullptr;
+}
+
+Sound* ResourceManager::GetSound(const wstring& sound)
 {
 	return nullptr;
 }

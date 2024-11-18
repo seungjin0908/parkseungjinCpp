@@ -26,6 +26,9 @@ public:
 	Tilemap* LoadTilemap(const wstring& key, const wstring& path);
 	Tilemap* GetTilemap(const wstring& key);
 
+	Sound* GetSound(const wstring& sound);
+	Sound* LoadSound(const wstring& sound, const wstring& path);
+
 private:
 	wstring _resourcePath;
 

@@ -260,6 +260,7 @@
     <ClCompile Include="Day26Scene.cpp" />
     <ClCompile Include="Day27Creature.cpp" />
     <ClCompile Include="Day27Scene.cpp" />
+    <ClCompile Include="Day33Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
     <ClCompile Include="FlipbookRenderer.cpp" />
@@ -279,6 +280,8 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -310,6 +313,10 @@
     <None Include="Comment27.md" />
     <None Include="Comment28.md" />
     <None Include="Comment29.md" />
+    <None Include="Comment30.md" />
+    <None Include="Comment31.md" />
+    <None Include="Comment32.md" />
+    <None Include="Comment33.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AstarNode.h" />
@@ -345,6 +352,7 @@
     <ClInclude Include="Day26Scene.h" />
     <ClInclude Include="Day27Creature.h" />
     <ClInclude Include="Day27Scene.h" />
+    <ClInclude Include="Day33Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />
     <ClInclude Include="Enums.h" />
@@ -359,6 +367,8 @@
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="Texture.h" />

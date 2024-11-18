@@ -205,6 +205,15 @@
     <ClCompile Include="CircleCollider.cpp">
       <Filter>05.Components</Filter>
     </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day33Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -289,6 +298,18 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment29.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment30.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment31.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment32.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment33.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -451,6 +472,15 @@
     </ClInclude>
     <ClInclude Include="CircleCollider.h">
       <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day33Scene.h">
+      <Filter>03.Scenes\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
