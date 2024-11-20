@@ -1,16 +1,20 @@
 ﻿#include "pch.h"
 #include "Scene.h"
 #include "GameObject.h"
+#include "UI.h"
 void Scene::Init()
 {
-	
+	for (UI* ui : _uis)
+	{
+		ui->Init();
+	}
 }
 void Scene::Render(HDC hdc)
 {
 	{
 		for (int layer = 0; layer < static_cast<int>(LayerType::End); layer++)
 		{
-
+			
 		}
 	}
 
@@ -77,4 +81,21 @@ GameObject* Scene::FindGameObject(string name)
 	}
 
 	return nullptr;
+}
+
+void Scene::AddUI(UI* ui)
+{
+	this->_uis.push_back(ui);
+}
+void Scene::RemoveUI(UI* ui)
+{
+	auto findIt = find(_uis.begin(), _uis.end(), ui);
+
+	if (findIt != _uis.end())
+	{
+		(*findIt)->Release();
+		UI* deleteUI - (*findIt);
+		SAFE_DELETE(delegateUI);
+		_uis.erase(findIt);
+	}
 }

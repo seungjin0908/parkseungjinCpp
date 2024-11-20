@@ -261,12 +261,15 @@
     <ClCompile Include="Day27Creature.cpp" />
     <ClCompile Include="Day27Scene.cpp" />
     <ClCompile Include="Day33Scene.cpp" />
+    <ClCompile Include="Day34Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
     <ClCompile Include="FlipbookRenderer.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Image.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="Panel.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Academy|Win32'">Create</PrecompiledHeader>
@@ -275,6 +278,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Academy|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="ProfileAreaPanel.cpp" />
+    <ClCompile Include="ProfileUIPanel.cpp" />
     <ClCompile Include="RandomManager.cpp" />
     <ClCompile Include="ResourceBase.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
@@ -288,6 +293,7 @@
     <ClCompile Include="Tilemap.cpp" />
     <ClCompile Include="TilemapRenderer.cpp" />
     <ClCompile Include="TimeManager.cpp" />
+    <ClCompile Include="UI.cpp" />
     <ClCompile Include="Vector2.cpp" />
     <ClCompile Include="Vector2Int.cpp" />
     <ClCompile Include="WindowsMain.cpp" />
@@ -317,6 +323,7 @@
     <None Include="Comment31.md" />
     <None Include="Comment32.md" />
     <None Include="Comment33.md" />
+    <None Include="Comment34.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AstarNode.h" />
@@ -353,6 +360,7 @@
     <ClInclude Include="Day27Creature.h" />
     <ClInclude Include="Day27Scene.h" />
     <ClInclude Include="Day33Scene.h" />
+    <ClInclude Include="Day34Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />
     <ClInclude Include="Enums.h" />
@@ -360,8 +368,12 @@
     <ClInclude Include="FlipbookRenderer.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Image.h" />
     <ClInclude Include="InputManager.h" />
+    <ClInclude Include="Panel.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="ProfileAreaPanel.h" />
+    <ClInclude Include="ProfileUIPanel.h" />
     <ClInclude Include="RandomManager.h" />
     <ClInclude Include="ResourceBase.h" />
     <ClInclude Include="ResourceManager.h" />
@@ -376,6 +388,7 @@
     <ClInclude Include="TilemapRenderer.h" />
     <ClInclude Include="TimeManager.h" />
     <ClInclude Include="Types.h" />
+    <ClInclude Include="UI.h" />
     <ClInclude Include="Vector2.h" />
     <ClInclude Include="Vector2Int.h" />
   </ItemGroup>
