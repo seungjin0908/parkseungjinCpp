@@ -14,7 +14,9 @@ enum class SceneType
 	Day24Scene,
 	Day26Scene,
 	Day27Scene,
-	Day33Scene
+	Day33Scene,
+	Day34Scene,
+	Day35Scene
 };
 
 enum class ColliderType

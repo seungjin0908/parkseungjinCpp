@@ -55,7 +55,7 @@ using byte = char;
 #include <queue>
 #include <unordered_map>
 #include <unordered_set>
-
+#include <functional>
 
 //==========================================
 //	## Define 설정 ##

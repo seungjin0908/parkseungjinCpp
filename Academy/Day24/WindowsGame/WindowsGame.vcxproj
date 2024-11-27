@@ -230,6 +230,7 @@
     <ClCompile Include="AstarNode.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="BoxRenderer.cpp" />
+    <ClCompile Include="Button.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="CenterRect.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
@@ -262,11 +263,14 @@
     <ClCompile Include="Day27Scene.cpp" />
     <ClCompile Include="Day33Scene.cpp" />
     <ClCompile Include="Day34Scene.cpp" />
+    <ClCompile Include="Day35Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
     <ClCompile Include="FlipbookRenderer.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameResultCardPanel.cpp" />
+    <ClCompile Include="GameResultPanel.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Panel.cpp" />
@@ -324,11 +328,13 @@
     <None Include="Comment32.md" />
     <None Include="Comment33.md" />
     <None Include="Comment34.md" />
+    <None Include="Comment35.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AstarNode.h" />
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="BoxRenderer.h" />
+    <ClInclude Include="Button.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="CenterRect.h" />
     <ClInclude Include="CircleCollider.h" />
@@ -361,6 +367,7 @@
     <ClInclude Include="Day27Scene.h" />
     <ClInclude Include="Day33Scene.h" />
     <ClInclude Include="Day34Scene.h" />
+    <ClInclude Include="Day35Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />
     <ClInclude Include="Enums.h" />
@@ -368,6 +375,8 @@
     <ClInclude Include="FlipbookRenderer.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameResultCardPanel.h" />
+    <ClInclude Include="GameResultPanel.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Panel.h" />

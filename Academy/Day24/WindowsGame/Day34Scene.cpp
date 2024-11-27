@@ -7,7 +7,7 @@ void Day34Scene::Init()
 {
 	Super::Init();
 
-	Texture* texture=Resource->LoadTexture(L"T_Image",L"")
+	Texture* texture = Resource->LoadTexture(L"T_Image", L"")
 	{
 		UI* ui = new Image();
 		ui

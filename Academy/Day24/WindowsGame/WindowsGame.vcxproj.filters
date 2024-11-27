@@ -56,6 +56,9 @@
     <Filter Include="06.UI\Day34">
       <UniqueIdentifier>{a35cdd9e-c3f2-404c-8bf8-b4f8c7241eba}</UniqueIdentifier>
     </Filter>
+    <Filter Include="06.UI\Day35">
+      <UniqueIdentifier>{69d54f98-70c0-433b-b7c9-a67e67c3c477}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -238,6 +241,18 @@
     <ClCompile Include="ProfileAreaPanel.cpp">
       <Filter>06.UI\Day34</Filter>
     </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>06.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Day35Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResultPanel.cpp">
+      <Filter>06.UI\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResultCardPanel.cpp">
+      <Filter>06.UI\Day35</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -337,6 +352,9 @@
       <Filter>Comment</Filter>
     </None>
     <None Include="Comment34.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment35.md">
       <Filter>Comment</Filter>
     </None>
   </ItemGroup>
@@ -526,6 +544,18 @@
     </ClInclude>
     <ClInclude Include="ProfileAreaPanel.h">
       <Filter>06.UI\Day34</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Day35Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResultPanel.h">
+      <Filter>06.UI\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResultCardPanel.h">
+      <Filter>06.UI\Day35</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
