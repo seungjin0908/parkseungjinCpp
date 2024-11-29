@@ -89,7 +89,7 @@ namespace Collision
 
 		Vector2 lengthVector = pos2 - pos1;
 		float legnth_sqrt = lengthVector.LengthSqrt();
-
+		
 		if (legnth_sqrt <= (radius1 + radius2) * (radius1 + radius2))
 		{
 			return true;

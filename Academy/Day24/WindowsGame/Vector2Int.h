@@ -14,7 +14,7 @@ struct Vector2Int
 
 	Vector2Int operator-(const Vector2Int& other);
 	void operator-=(const Vector2Int& other);
-
+	
 	Vector2Int operator*(const int32 other);
 	void operator*=(const int32 other);
 

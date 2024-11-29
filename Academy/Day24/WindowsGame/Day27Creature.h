@@ -33,12 +33,12 @@ public:
 	void SetFlipbook();
 
 	// Offset 설정을 위해 override
-	inline virtual void SetPos(Vector2 pos) override { _body.pos = pos; }
+	inline virtual void SetPos(Vector2 pos) override { _body.pos = pos ; }
 
 	void SetTilePos(Vector2Int pos) { _tilePos = pos; }
 	Vector2Int GetTilePos() { return _tilePos; }
 
-
+	
 public: // 움직임 관련
 	void SetPath(vector<Vector2> paths);
 	bool HasReachedDest();

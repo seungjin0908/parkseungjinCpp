@@ -21,8 +21,8 @@ void SpriteRenderer::Render(HDC hdc)
 
 	Vector2 pos = owner->GetPos();
 	Vector2 cameraPos = CurrentScene->GetCameraPos();
-	Vector2Int renderPos = {
-		static_cast<int>(pos.x + _info.Offset.x - cameraPos.x),
+	Vector2Int renderPos = { 
+		static_cast<int>(pos.x + _info.Offset.x - cameraPos.x), 
 		static_cast<int>(pos.y + _info.Offset.y - cameraPos.y)
 	};
 

@@ -6,7 +6,7 @@ void Image::Init()
 {
 	Super::Init();
 }
-void Image::Render(HDC hdc)
+void Image::Render(HDC hdc) 
 {
 	Super::Render(hdc);
 

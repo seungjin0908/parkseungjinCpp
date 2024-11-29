@@ -43,7 +43,7 @@ enum
 
 class InputManager
 {
-	DECLARE_SINGLE(InputManager);
+DECLARE_SINGLE(InputManager);
 
 public:
 	void Init(HWND hwnd);

@@ -287,7 +287,7 @@ void Day27Creature::Update_Move()
 		{
 			_dir = Day27CreatureDir::Left;
 		}
-
+		
 
 		this->SetPos(this->GetPos() + dir * _speed * Time->GetDeltaTime());
 

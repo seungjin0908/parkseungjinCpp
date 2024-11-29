@@ -4,8 +4,8 @@
 //==========================================
 //	## 윈도우 사이즈 ##
 //==========================================
-#define WIN_SIZE_X 579
-#define WIN_SIZE_Y 579
+#define WIN_SIZE_X 540
+#define WIN_SIZE_Y 909
 
 #ifdef _ACADEMY_
 #define WIN_START_X 2000

@@ -148,7 +148,7 @@ int Day19Scene::MakeStoneWithMousePos(int type)
 	_board[cellY][cellX]->Init();
 	_lastPos = Vector2Int(cellX, cellY);
 	_board[cellY][cellX]->SetInfo(_lastPos, type);
-
+	
 
 	return static_cast<int>(Day19ErrorCode::ERR_OK);
 }
@@ -157,7 +157,7 @@ wstring Day19Scene::GetErrorCodeReason(int errorCode)
 {
 	switch ((Day19ErrorCode)errorCode)
 	{
-	case Day19ErrorCode::ERR_OK:
+	case Day19ErrorCode::ERR_OK :
 		return L"정상입니다.";
 
 	case Day19ErrorCode::ERR_ALREADY_STONE_POS:

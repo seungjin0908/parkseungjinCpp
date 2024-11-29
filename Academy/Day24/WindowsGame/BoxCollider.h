@@ -2,7 +2,7 @@
 #include "Collider.h"
 class BoxCollider : public Collider
 {
-	//	DECLARE_CHILD(BoxCollider, Collider);
+//	DECLARE_CHILD(BoxCollider, Collider);
 	using Super = Collider;
 public:
 	BoxCollider();

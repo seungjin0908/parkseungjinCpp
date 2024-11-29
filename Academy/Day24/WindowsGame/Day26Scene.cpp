@@ -18,7 +18,7 @@ void Day26Scene::Init()
 			wstring tileTextureKeyName = format(L"T_Tile_{:02d}", i);
 			wstring tileSpriteKeyName = format(L"S_Tile_{:02d}", i);
 
-			Texture* texture = Resource->LoadTexture(tileTextureKeyName, tileTextureFileName);
+			Texture * texture = Resource->LoadTexture(tileTextureKeyName, tileTextureFileName);
 			Sprite* sprite = Resource->CreateSprite(tileSpriteKeyName, texture);
 
 			sprites.push_back(sprite);
@@ -32,7 +32,7 @@ void Day26Scene::Init()
 	{
 		GameObject* gameObject = new GameObject();
 		gameObject->SetPos({ 0, 0 });
-
+		
 		{
 			TilemapRenderer* component = new TilemapRenderer();
 			TilemapRendererInfo info;

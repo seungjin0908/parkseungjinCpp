@@ -12,7 +12,7 @@ void Day17Box::Update()
 {
 
 }
-void Day17Box::Release()
+void Day17Box::Release() 
 {
 
 }

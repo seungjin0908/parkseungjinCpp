@@ -230,12 +230,15 @@
     <ClCompile Include="AstarNode.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="BoxRenderer.cpp" />
+    <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ButtonPanel.cpp" />
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="CenterRect.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="CommonFunction.cpp" />
+    <ClCompile Include="CompletePanel.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Day17Player.cpp" />
     <ClCompile Include="Day17Box.cpp" />
@@ -262,11 +265,14 @@
     <ClCompile Include="Day27Scene.cpp" />
     <ClCompile Include="Day33Scene.cpp" />
     <ClCompile Include="Day34Scene.cpp" />
+    <ClCompile Include="Day35Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
     <ClCompile Include="Flipbook.cpp" />
     <ClCompile Include="FlipbookRenderer.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameResultCardPanel.cpp" />
+    <ClCompile Include="GameResultPanel.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Panel.cpp" />
@@ -285,10 +291,12 @@
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="ScorePanel.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
+    <ClCompile Include="StarPanel.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Tilemap.cpp" />
     <ClCompile Include="TilemapRenderer.cpp" />
@@ -309,12 +317,13 @@
     <None Include="Comment16.md" />
     <None Include="Comment17.md" />
     <None Include="Comment18.md" />
+    <None Include="Comment19.md" />
     <None Include="Comment20.md" />
     <None Include="Comment21.md" />
     <None Include="Comment22.md" />
     <None Include="Comment23.md" />
     <None Include="Comment24.md" />
-    <None Include="Comment25[길찾기 알고리].md" />
+    <None Include="Comment25-길찾기 알고리즘 정리.md" />
     <None Include="Comment26.md" />
     <None Include="Comment27.md" />
     <None Include="Comment28.md" />
@@ -324,17 +333,21 @@
     <None Include="Comment32.md" />
     <None Include="Comment33.md" />
     <None Include="Comment34.md" />
+    <None Include="Comment35.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AstarNode.h" />
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="BoxRenderer.h" />
+    <ClInclude Include="Button.h" />
+    <ClInclude Include="ButtonPanel.h" />
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="CenterRect.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="CommonFunction.h" />
+    <ClInclude Include="CompletePanel.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Day17Player.h" />
     <ClInclude Include="Day17Box.h" />
@@ -361,6 +374,7 @@
     <ClInclude Include="Day27Scene.h" />
     <ClInclude Include="Day33Scene.h" />
     <ClInclude Include="Day34Scene.h" />
+    <ClInclude Include="Day35Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />
     <ClInclude Include="Enums.h" />
@@ -368,6 +382,8 @@
     <ClInclude Include="FlipbookRenderer.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameResultCardPanel.h" />
+    <ClInclude Include="GameResultPanel.h" />
     <ClInclude Include="Image.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="Panel.h" />
@@ -375,14 +391,17 @@
     <ClInclude Include="ProfileAreaPanel.h" />
     <ClInclude Include="ProfileUIPanel.h" />
     <ClInclude Include="RandomManager.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="ResourceBase.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="ScorePanel.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpriteRenderer.h" />
+    <ClInclude Include="StarPanel.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Tilemap.h" />
     <ClInclude Include="TilemapRenderer.h" />
@@ -397,6 +416,9 @@
     <None Include="Comment01.md" />
     <None Include="Comment02.md" />
     <None Include="Comment03.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WindowsGame.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

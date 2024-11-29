@@ -89,7 +89,7 @@ void Day24Scene::Update()
 	}
 #pragma endregion
 
-
+	
 
 	if (Input->GetKeyDown(KeyCode::LeftMouse))
 	{

@@ -75,7 +75,7 @@ void Day24Enemy::OnTriggerEnter(Collider* collider, Collider* other)
 	{
 		// 1. 데미지를 준다.
 		this->OnDamaged(otherBullet);
-
+		
 		// 2. 총알을 삭제한다.
 		CurrentScene->DespawnGameObject(otherBullet);
 	}

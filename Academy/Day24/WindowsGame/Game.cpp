@@ -24,7 +24,7 @@ void Game::Init(HWND hWnd)
 	//==========================================
 	//	## 더블버퍼링 세팅 ##
 	//==========================================
-
+	
 	//2. _hdc 화면과 똑같은 크기의 화면을 생성한다.
 	_hdcBack = ::CreateCompatibleDC(_hdc);
 	// 윈도우의 크기를 받아옴
@@ -43,14 +43,14 @@ void Game::Init(HWND hWnd)
 	GET_SINGLE(SoundManager)->Init();
 	GET_SINGLE(CollisionManager)->Init();
 	GET_SINGLE(SceneManager)->Init();
-	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Day34Scene);
+	GET_SINGLE(SceneManager)->ChangeScene(SceneType::Day35Scene);
 }
 
 void Game::Update()
 {
 	GET_SINGLE(CollisionManager)->Update();
 	Input->Update();
-	Time->Update();
+	Time->Update(); 
 	GET_SINGLE(SceneManager)->Update();
 }
 

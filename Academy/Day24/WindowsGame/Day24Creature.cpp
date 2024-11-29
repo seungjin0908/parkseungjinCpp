@@ -13,7 +13,7 @@ void Day24Creature::Init()
 	//B : 0~255 (unsigned char) - 1Byte
 	//A(Alpha) : 0~255 (unsigned char) - 1Byte
 
-	Texture* textureDown = Resource->LoadTexture(L"T_PlayerDown", L"Day24/PlayerDown.bmp", RGB(128, 128, 128));
+	Texture* textureDown = Resource->LoadTexture(L"T_PlayerDown", L"Day24/PlayerDown.bmp", RGB(128,128,128));
 	Texture* textureUp = Resource->LoadTexture(L"T_PlayerUp", L"Day24/PlayerUp.bmp", RGB(128, 128, 128));
 	Texture* textureLeft = Resource->LoadTexture(L"T_PlayerLeft", L"Day24/PlayerLeft.bmp", RGB(128, 128, 128));
 	Texture* textureRight = Resource->LoadTexture(L"T_PlayerRight", L"Day24/PlayerRight.bmp", RGB(128, 128, 128));
@@ -239,7 +239,7 @@ void Day24Creature::Update_Move()
 }
 void Day24Creature::Update_Attack()
 {
-
+	
 	//  (나중에 엔진을 실제로 사용할때는)
 	// 엔진기능으로도 부족해서
 	// 툴을 새로 만듭니다.
@@ -255,7 +255,7 @@ void Day24Creature::Update_Attack()
 	// 총알생성
 	// 이 공격모션에 한번도 공격한적이 없고
 	// 내가 원하는 Flipbook인덱스가 지나갔으면
-	if (_isAttacked == false && 6 <= _flipbookRenderer->GetInfo().Index)
+	if(_isAttacked == false && 6 <= _flipbookRenderer->GetInfo().Index)
 	{
 		_isAttacked = true;
 		Day24Bullet* gameObject = new Day24Bullet();
@@ -359,7 +359,7 @@ void Day24Creature::Shoot(Vector2 dir)
 			SetDir(Day24CreatureDir::Right);
 		}
 	}
-	else
+	else 
 	{
 		// 위나 아래 쳐다보도록
 		if (dir.y < 0)

@@ -14,7 +14,7 @@ void BoxCollider::Render(HDC hdc)
 #ifdef _DEBUG
 	CenterRect drawRect = this->GetCollision();
 	Vector2 cameraPos = CurrentScene->GetCameraPos();
-
+	
 	drawRect.pos -= cameraPos;
 	drawRect.Draw(hdc);
 #endif
@@ -47,7 +47,7 @@ bool BoxCollider::CheckCollision(Collider* other)
 
 		return Collision::RectInCircle(myCollision, circlePos1, circleRadius1);
 	}
-	break;
+		break;
 	case ColliderType::Box:
 	{
 		BoxCollider* otherCollider = static_cast<BoxCollider*>(other);
@@ -55,7 +55,7 @@ bool BoxCollider::CheckCollision(Collider* other)
 
 		return Collision::RectInRect(this->GetCollision(), otherCollision);
 	}
-	break;
+		break;
 	default:
 		return false;
 		break;

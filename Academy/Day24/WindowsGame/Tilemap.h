@@ -49,7 +49,7 @@ protected:
 	Vector2Int _mapSize = {};
 
 	// 타일하나당 크기 (53*49)
-	Vector2Int _tileSize = {};
+	Vector2Int _tileSize = {}; 
 
 	//2차월 배열로 타일리스트를 들고있어야함
 	vector<vector<Tile>> _tiles;

@@ -63,7 +63,7 @@ Sprite* ResourceManager::CreateSprite(const wstring& key, Texture* texture, int 
 		cy = texture->GetSize().y;
 	}
 
-	Sprite* sprite = new Sprite(texture, x, y, cx, cy);
+	Sprite* sprite = new Sprite(texture, x, y , cx, cy);
 	_resources[key] = sprite;
 
 	return sprite;

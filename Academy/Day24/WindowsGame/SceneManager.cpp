@@ -14,6 +14,7 @@
 #include "Day27Scene.h"
 #include "Day33Scene.h"
 #include "Day34Scene.h"
+#include "Day35Scene.h"
 
 void SceneManager::Init()
 {
@@ -44,7 +45,7 @@ void SceneManager::Update()
 	//==========================================
 	//	## Change Scene Logic
 	//==========================================
-
+	
 	// 1. 기존 씬 해제
 	if (_scene)
 	{
@@ -53,7 +54,7 @@ void SceneManager::Update()
 
 	// 2. 새로운씬을 생성
 	Scene* newScene = this->CreateScene(_nextSceneType);
-
+	
 	// 3. 기존 씬포인터에 덮어쓰기
 	SAFE_DELETE(_scene);
 	_scene = newScene;
@@ -65,7 +66,7 @@ void SceneManager::Update()
 
 }
 
-void SceneManager::Release()
+void SceneManager::Release() 
 {
 
 }
@@ -117,10 +118,13 @@ Scene* SceneManager::CreateScene(SceneType sceneType)
 	case SceneType::Day34Scene:
 		scene = new Day34Scene();
 		break;
+	case SceneType::Day35Scene:
+		scene = new Day35Scene();
+		break;
 	default:
 		break;
 	}
-
+	
 	return scene;
 }
 

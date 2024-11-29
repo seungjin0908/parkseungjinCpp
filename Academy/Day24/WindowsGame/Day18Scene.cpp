@@ -75,7 +75,7 @@ void Day18Scene::Update_Default()
 	{
 		_leftWall.pos.y += _wallSpeed * Time->GetDeltaTime();
 
-		_leftWall.pos.y = ::clamp(_leftWall.pos.y,
+		_leftWall.pos.y = ::clamp(_leftWall.pos.y, 
 			0 + _leftWall.height / 2,
 			WIN_SIZE_Y - _leftWall.height / 2);
 	}

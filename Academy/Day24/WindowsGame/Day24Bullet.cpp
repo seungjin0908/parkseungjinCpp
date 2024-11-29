@@ -7,7 +7,7 @@ void Day24Bullet::Init()
 {
 	Super::Init();
 
-	this->SetBody(CenterRect(0, 0, 30, 30));
+	this->SetBody(CenterRect(0,0,30,30));
 	{
 		BoxRenderer* component = new BoxRenderer();
 		component->SetInfo({ DKGRAY_BRUSH });

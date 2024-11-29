@@ -13,7 +13,7 @@ protected:
 public:
 	Texture* LoadBmp(const wstring& path);
 	void Render(HDC hdc, int x, int y);
-
+	
 	void SetSize(Vector2Int size) { _size = size; }
 	Vector2Int GetSize() { return _size; }
 

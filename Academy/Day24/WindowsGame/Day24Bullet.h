@@ -14,7 +14,7 @@ struct Day24BulletInfo
 class Day24Bullet : public GameObject
 {
 	DECLARE_CHILD(Day24Bullet, GameObject);
-
+	
 public:
 	virtual void Init();
 	virtual void Render(HDC hdc);

@@ -85,8 +85,8 @@ bool Sound::LoadWave(const wstring& path)
 	// 버퍼를 사용하고
 	// 락을 푸는 형태로 사용합니다.
 
-
-
+	
+	
 
 	// 버퍼라는건 
 	// 여러군데에서 사용 가능함.

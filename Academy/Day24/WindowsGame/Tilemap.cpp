@@ -44,7 +44,7 @@ void Tilemap::LoadFile(const wstring& path)
 		ifs >> _mapSize.y;
 
 		_tiles = vector<vector<Tile>>(_mapSize.y, vector<Tile>(_mapSize.x));
-
+		
 
 		for (int y = 0; y < _mapSize.y; y++)
 		{
@@ -122,7 +122,7 @@ void Tilemap::SetSprites(vector<Sprite*> sprites)
 
 	if (sprites.size() <= 0) return;
 
-
+	
 	_tileSize.x = sprites.back()->GetSize().x;
 	_tileSize.y = sprites.back()->GetSize().y;
 }

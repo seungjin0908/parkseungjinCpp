@@ -160,12 +160,12 @@ void Day27Scene::Update_CharacterMove()
 		//누른 스크린좌표를 타일값좌표로 변환
 		Vector2 mousePos = Input->GetMousePosVector2();
 		Vector2 worldPos = ScreenPosToWorldPos(mousePos);
-
+		
 		Vector2Int tilePos = _tilemapRenderer->GetTilePosByWorldPos(worldPos);
 		printf("클릭한 지점 : [%d, %d]\n", tilePos.x, tilePos.y);
 
 		TilemapRendererInfo info = _tilemapRenderer->GetInfo();
-
+		
 		if (info.Tilemap == nullptr)
 		{
 			return;

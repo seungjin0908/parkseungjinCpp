@@ -34,6 +34,7 @@
 #include <algorithm>
 #include <string>
 #include <fstream>
+#include <functional>
 using namespace std;
 
 //==========================================

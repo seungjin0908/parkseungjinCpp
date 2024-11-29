@@ -11,7 +11,7 @@ enum CenterRectDrawType
 /// </summary>
 struct CenterRect
 {
-	Vector2 pos = { 0, 0 };	//중심좌표
+	Vector2 pos = {0, 0};	//중심좌표
 	float width = 0, height = 0;
 
 	void Draw(HDC hdc, CenterRectDrawType drawType = DRAWTYPE_RECT, int brush = NULL_BRUSH);

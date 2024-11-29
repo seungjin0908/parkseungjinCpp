@@ -1,7 +1,7 @@
 ﻿#pragma once
 class TimeManager
 {
-	DECLARE_SINGLE(TimeManager);
+DECLARE_SINGLE(TimeManager);
 
 public:
 	void Init();

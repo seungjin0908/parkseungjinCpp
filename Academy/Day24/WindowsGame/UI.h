@@ -3,7 +3,7 @@ class Panel;
 class UI
 {
 public:
-	UI() {}
+	UI(){}
 	virtual ~UI() {}
 
 public:

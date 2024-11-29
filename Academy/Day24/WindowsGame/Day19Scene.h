@@ -27,7 +27,7 @@ public:
 	virtual void Render(HDC hdc);
 	virtual void Update();
 	virtual void Release();
-
+	
 public:
 	void Update_BlackTurn();
 	void Update_WhiteTurn();
