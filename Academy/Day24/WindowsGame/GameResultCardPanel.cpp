@@ -1,5 +1,6 @@
 ﻿#include "pch.h"
 #include "GameResultCardPanel.h"
+<<<<<<< HEAD
 #include "ButtonPanel.h"
 #include "ScorePanel.h"
 #include "CompletePanel.h"
@@ -30,6 +31,12 @@ void GameResultCardPanel::Init()
 		this->AddChild(panel);
 	}
 
+=======
+
+void GameResultCardPanel::Init()
+{
+	Super::Init();
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 }
 void GameResultCardPanel::Render(HDC hdc)
 {
@@ -42,4 +49,8 @@ void GameResultCardPanel::Update()
 void GameResultCardPanel::Release()
 {
 	Super::Release();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe

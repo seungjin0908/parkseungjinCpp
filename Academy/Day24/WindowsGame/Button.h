@@ -8,7 +8,11 @@ enum class EButtonState
 };
 class Button : public UI
 {
+<<<<<<< HEAD
 	DECLARE_CHILD(Button, UI)
+=======
+	DECLARE_CHILD(Button, UI);
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 
 public:
 	virtual void Init();
@@ -24,8 +28,13 @@ public:
 	}
 
 public:
+<<<<<<< HEAD
 	// function<void()> 이 변수를 만들어서 보내야하기 떄문에, 사용자 측면에서 많이 불편합니다.
 	/*void AddOnClickDelegate(function<void()> onclick)
+=======
+	// function<void()> 이 변수를 만들어서 보내야 하기 때문에, 사용자 측면에서 많이 불편하다.
+	/*void AddOnClickDelegate(function<void()>onclick)
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 	{
 		_onclick = onclick;
 	}*/
@@ -42,7 +51,12 @@ public:
 
 	EButtonState _state = EButtonState::Normal;
 
+<<<<<<< HEAD
 	//버튼 눌렀을때 이벤트를 받아주는 callbackfunction 변수
 	function<void()> _onclick = nullptr;
+=======
+	// 버튼 눌렀을때 이벤트를 받아주는 callbackfunction 변수
+	function<void()>_onclick = nullptr;
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 };
 

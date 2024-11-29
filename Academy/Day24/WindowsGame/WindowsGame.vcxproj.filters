@@ -59,6 +59,9 @@
     <Filter Include="06.UIs\Day35">
       <UniqueIdentifier>{fc462479-1d1f-4f18-95fd-80db8e192afa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="06.UI\Day35">
+      <UniqueIdentifier>{69d54f98-70c0-433b-b7c9-a67e67c3c477}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="WindowsMain.cpp">
@@ -264,6 +267,18 @@
     </ClCompile>
     <ClCompile Include="StarPanel.cpp">
       <Filter>06.UIs\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>06.UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Day35Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResultPanel.cpp">
+      <Filter>06.UI\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResultCardPanel.cpp">
+      <Filter>06.UI\Day35</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -584,6 +599,18 @@
     </ClInclude>
     <ClInclude Include="StarPanel.h">
       <Filter>06.UIs\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>06.UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Day35Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResultPanel.h">
+      <Filter>06.UI\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResultCardPanel.h">
+      <Filter>06.UI\Day35</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

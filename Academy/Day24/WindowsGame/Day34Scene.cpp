@@ -6,6 +6,7 @@
 void Day34Scene::Init()
 {
 
+<<<<<<< HEAD
 	Texture* texture= Resource->LoadTexture(L"T_Image", L"Day34/image.bmp");
 	Resource->CreateSprite(L"S_Image", texture);
 
@@ -18,6 +19,9 @@ void Day34Scene::Init()
 		_image = ui;
 	}*/
 
+=======
+	Texture* texture = Resource->LoadTexture(L"T_Image", L"")
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 	{
 		ProfileUIPanel* ui = new ProfileUIPanel();
 		ui->SetPos({100 , WIN_SIZE_Y / 2 });

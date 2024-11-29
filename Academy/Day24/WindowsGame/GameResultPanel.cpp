@@ -1,11 +1,15 @@
 ﻿#include "pch.h"
 #include "GameResultPanel.h"
 #include "Image.h"
+<<<<<<< HEAD
 #include "GameResultCardPanel.h"
+=======
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 void GameResultPanel::Init()
 {
 	Super::Init();
 
+<<<<<<< HEAD
 	Resource->LoadTexture(L"T_Image_Background", L"Day35/Image_Background.bmp", RGB(255, 0, 255));
 	Resource->CreateSprite(L"S_Image_Background", Resource->GetTexture(L"T_Image_Background"));
 
@@ -25,6 +29,9 @@ void GameResultPanel::Init()
 		this->AddChild(panel);
 	}
 
+=======
+	Resource->LoadTexture(L"T_Image_Background",L"Day35/Image_")
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 }
 void GameResultPanel::Render(HDC hdc)
 {
@@ -37,4 +44,8 @@ void GameResultPanel::Update()
 void GameResultPanel::Release()
 {
 	Super::Release();
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe

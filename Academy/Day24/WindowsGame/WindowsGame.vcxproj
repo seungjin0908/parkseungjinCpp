@@ -231,7 +231,10 @@
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="BoxRenderer.cpp" />
     <ClCompile Include="Button.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="ButtonPanel.cpp" />
+=======
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
     <ClCompile Include="CameraComponent.cpp" />
     <ClCompile Include="CenterRect.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
@@ -340,7 +343,10 @@
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="BoxRenderer.h" />
     <ClInclude Include="Button.h" />
+<<<<<<< HEAD
     <ClInclude Include="ButtonPanel.h" />
+=======
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
     <ClInclude Include="CameraComponent.h" />
     <ClInclude Include="CenterRect.h" />
     <ClInclude Include="CircleCollider.h" />

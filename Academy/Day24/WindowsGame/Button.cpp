@@ -9,7 +9,10 @@ void Button::Init()
 
 	this->SetState(EButtonState::Normal);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 void Button::Render(HDC hdc)
 {
 	if (_isShow == false)
@@ -18,13 +21,21 @@ void Button::Render(HDC hdc)
 	}
 	Super::Render(hdc);
 
+<<<<<<< HEAD
 	if (_currentSprite == nullptr)
+=======
+	if (_currentSprite = nullptr)
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 	{
 		return;
 	}
 
 	Panel* parent = this->GetParent();
+<<<<<<< HEAD
 	Vector2 renderPos = { _pos.x, _pos.y };
+=======
+	Vector2 renderPos = { _pos.x,_pos.y };
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 	while (parent != nullptr)
 	{
 		renderPos += parent->GetPos();
@@ -37,11 +48,19 @@ void Button::Update()
 {
 	Super::Update();
 
+<<<<<<< HEAD
 	//버튼의 특성
 	// 버튼위에 마우스가 있으면 Hover상태로 보여준다.
 	// 버튼위에 마우스가 있고 + 클릭상태면 Pressed로 보여준다
 	// Disabled면 그냥 Disabled로 보여준다.
 	// 그 외에는 Normal 상태 
+=======
+	// 버튼의 특성
+	// 버튼위에 마우스가 있으면 Hover상태로 보여준다.
+	// 버튼위에 마우스가 있고 + 클릭상태면 Pressed로 보여준다.
+	// Disabled면 그냥 Disabled로 보여준다.
+	// 그 외에는 Normal 상태
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 
 	// 수도코드
 	// 
@@ -59,7 +78,11 @@ void Button::Update()
 	//	}
 	//	else
 	//	{
+<<<<<<< HEAD
 	//		//클릭하다 떼어냈다면?
+=======
+	//		// 클릭하다 떼어냈다면?
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 	//		if (state == pressed)
 	//		{
 	//			// 원하는 함수실행
@@ -90,6 +113,10 @@ void Button::Update()
 			{
 				//TODO : 원하는 함수실행
 				printf("Pressed!\n");
+<<<<<<< HEAD
+=======
+
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 				if (_onclick != nullptr)
 				{
 					_onclick();
@@ -102,7 +129,10 @@ void Button::Update()
 	{
 		SetState(EButtonState::Normal);
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
 }
 void Button::Release()
 {
@@ -111,6 +141,12 @@ void Button::Release()
 
 void Button::SetState(EButtonState state)
 {
+<<<<<<< HEAD
 	_state = state;
 	_currentSprite = _sprites[(int)_state];
 }
+=======
+	_state = EButtonState::Normal;
+	_currentSprite = _sprites[(int)_state];
+}
+>>>>>>> a40139de517a68c5574ed6859716746e43b829fe
