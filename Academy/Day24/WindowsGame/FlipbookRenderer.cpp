@@ -2,6 +2,7 @@
 #include "FlipbookRenderer.h"
 #include "Texture.h"
 #include "GameObject.h"
+#include "Scene.h"
 
 void FlipbookRenderer::Init()
 {
@@ -13,9 +14,18 @@ void FlipbookRenderer::Render(HDC hdc)
 
 	FlipbookInfo flipbookInfo = _flipbook->GetInfo();
 
+	Vector2 cameraPos = CurrentScene->GetCameraPos();
+	Vector2Int renderPos = {
+		static_cast<int>(this->_owner->GetPos().x - flipbookInfo.Size.x / 2 - cameraPos.x),
+		static_cast<int>(this->_owner->GetPos().y - flipbookInfo.Size.y / 2 - cameraPos.y)
+	};
+
+	renderPos += _info.Offest;
+
+
 	::TransparentBlt(hdc,
-		this->_owner->GetPos().x - flipbookInfo.Size.x / 2,
-		this->_owner->GetPos().y - flipbookInfo.Size.y / 2,
+		renderPos.x,
+		renderPos.y,
 		flipbookInfo.Size.y,
 		flipbookInfo.Size.y,
 		flipbookInfo.Texture->GetDC(),
@@ -70,7 +80,7 @@ void FlipbookRenderer::Release()
 
 void FlipbookRenderer::SetInfo(FlipbookRendererInfo info)
 {
-	_info = info;
 	_flipbook = Resource->GetFlipbook(info.FlipbookKey);
+	_info = info;
 	_info.LastIndex = _flipbook->GetInfo().End;
 }

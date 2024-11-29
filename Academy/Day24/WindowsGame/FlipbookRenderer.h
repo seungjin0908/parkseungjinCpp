@@ -7,6 +7,8 @@ struct FlipbookRendererInfo
 	int Index = 0;
 	float SumTime = 0.0f;
 	int LastIndex = 0;
+
+	Vector2 Offest = {};
 };
 
 class FlipbookRenderer : public Component

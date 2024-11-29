@@ -60,7 +60,7 @@ void Vector2Int::operator*=(const int32 other)
 Vector2Int Vector2Int::operator*(const float other)
 {
 	return Vector2Int(
-		static_cast<int>(x * other), 
+		static_cast<int>(x * other),
 		static_cast<int>(y * other));
 }
 void Vector2Int::operator*=(const float other)

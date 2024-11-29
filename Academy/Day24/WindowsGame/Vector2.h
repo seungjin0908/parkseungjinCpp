@@ -73,6 +73,7 @@ struct Vector2
 	static float SignedAngle(const Vector2 from, const Vector2 to);
 	float SignedAngle(const Vector2 to);
 
+
 	//magnitude
 	float LengthSqrt();
 	float Length();

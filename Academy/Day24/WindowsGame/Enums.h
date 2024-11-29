@@ -14,7 +14,8 @@ enum class SceneType
 	Day24Scene,
 	Day26Scene,
 	Day27Scene,
-	Day33Scene
+	Day33Scene,
+	Day34Scene,
 };
 
 enum class ColliderType
@@ -32,12 +33,14 @@ enum CollisionLayerType
 	CLT_ITEM
 };
 
+// 뒤에 둘수록 마지막에 그린다.
 enum class LayerType
 {
 	BackGround,
 	Object,
 	Character,
 	WorldUI,
+
 
 
 	End

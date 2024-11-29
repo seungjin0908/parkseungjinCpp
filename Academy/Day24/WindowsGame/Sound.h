@@ -17,6 +17,6 @@ public:
 
 private:
 	DSBUFFERDESC _bufferDesc = {};
-	LPDIRECTSOUNDBUFFER _soundBuffer = nullptr;
+	LPDIRECTSOUNDBUFFER _soundBuffer = nullptr; // 사운드카드 재료
 };
 

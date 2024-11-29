@@ -110,18 +110,18 @@ LRESULT WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	case WM_CREATE:
 		srand(time(NULL));
 		break;
-		
+
 	case WM_PAINT:
-		{
-			// 화면을 그리는 이벤트
-			// 시작했을떄 호출한번되고, InvalidateRect라는 함수가 호출됐을때 한번 실행되고
+	{
+		// 화면을 그리는 이벤트
+		// 시작했을떄 호출한번되고, InvalidateRect라는 함수가 호출됐을때 한번 실행되고
 
-			PAINTSTRUCT ps;
-			HDC hdc = ::BeginPaint(hWnd, &ps);
+		PAINTSTRUCT ps;
+		HDC hdc = ::BeginPaint(hWnd, &ps);
 
-			::EndPaint(hWnd, &ps);
-		}
-		break;
+		::EndPaint(hWnd, &ps);
+	}
+	break;
 
 	case WM_DESTROY:
 		// 윈도우 종료 메세지가 왔을때 발생되는 이벤트

@@ -13,7 +13,7 @@ void Day21Scene::Init()
 	Super::Init();
 
 	{
-		Texture * texture = Resource->LoadTexture(L"T_Paddle", L"Day21/paddle.bmp");
+		Texture* texture = Resource->LoadTexture(L"T_Paddle", L"Day21/paddle.bmp");
 		Resource->CreateSprite(L"S_Paddle", texture);
 	}
 	{
@@ -35,7 +35,7 @@ void Day21Scene::Init()
 		}
 		{
 			BoxCollider* component = new BoxCollider();
-			component->SetCollision(CenterRect(0,0, 172, 45));
+			component->SetCollision(CenterRect(0, 0, 172, 45));
 			gameObject->AddComponent(component);
 		}
 		_paddle = gameObject;

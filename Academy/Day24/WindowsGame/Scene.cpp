@@ -4,6 +4,7 @@
 #include "UI.h"
 void Scene::Init()
 {
+
 	for (UI* ui : _uis)
 	{
 		ui->Init();
@@ -14,22 +15,55 @@ void Scene::Render(HDC hdc)
 	{
 		for (int layer = 0; layer < static_cast<int>(LayerType::End); layer++)
 		{
-			
+			int size = _gameObjects[layer].size();
+			for (int i = 0; i < size; i++)
+			{
+				GameObject* gameObject = _gameObjects[layer][i];
+				if (gameObject == nullptr) continue;
+				gameObject->Render(hdc);
+			}
 		}
 	}
 
-	/*for (GameObject* gameObject : _gameObjects)
+	//for (GameObject* gameObject : _gameObjects)
+	//{
+	//	if (gameObject == nullptr) continue;
+	//	gameObject->Render(hdc);
+	//}
+
 	{
-		if (gameObject == nullptr) continue;
-		gameObject->Render(hdc);
-	}*/
+		for (UI* ui : _uis)
+		{
+			ui->Render(hdc);
+		}
+	}
 }
 void Scene::Update()
 {
-	for (GameObject* gameObject : _gameObjects)
 	{
-		if (gameObject == nullptr) continue;
-		gameObject->Update();
+		for (int layer = 0; layer < static_cast<int>(LayerType::End); layer++)
+		{
+			int size = _gameObjects[layer].size();
+			for (int i = 0; i < size; i++)
+			{
+				GameObject* gameObject = _gameObjects[layer][i];
+				if (gameObject == nullptr) continue;
+				gameObject->Update();
+			}
+		}
+	}
+	//for (GameObject* gameObject : _gameObjects)
+	//{
+	//	if (gameObject == nullptr) continue;
+	//	gameObject->Update();
+	//}
+
+
+	{
+		for (UI* ui : _uis)
+		{
+			ui->Update();
+		}
 	}
 
 	while (false == _despawnObjectList.empty())
@@ -37,31 +71,45 @@ void Scene::Update()
 		GameObject* deleteGameObject = _despawnObjectList.front();
 		_despawnObjectList.pop();
 
-		auto findIt = find(_gameObjects.begin(), _gameObjects.end(), deleteGameObject);
+		int layerType = deleteGameObject->GetLayerTypeInt();
 
-		if (findIt != _gameObjects.end())
+		auto findIt = find(_gameObjects[layerType].begin(), _gameObjects[layerType].end(), deleteGameObject);
+
+		if (findIt != _gameObjects[layerType].end())
 		{
 			deleteGameObject->Release();
 			SAFE_DELETE(deleteGameObject);
-			_gameObjects.erase(findIt);
+			_gameObjects[layerType].erase(findIt);
 		}
 	}
 }
 void Scene::Release()
 {
-	for (GameObject* gameObject : _gameObjects)
+	for (vector<GameObject*>& gameobjects : _gameObjects)
 	{
-		gameObject->Release();
-		SAFE_DELETE(gameObject);
+		for (GameObject* gameObject : gameobjects)
+		{
+			gameObject->Release();
+			SAFE_DELETE(gameObject);
+		}
+		gameobjects.clear();
 	}
-	_gameObjects.clear();
+
+	{
+		for (UI* ui : _uis)
+		{
+			ui->Release();
+			SAFE_DELETE(ui);
+		}
+		_uis.clear();
+	}
 }
 
 void Scene::SpawnGameObject(GameObject* gameObject)
 {
 	if (gameObject == nullptr) return;
 
-	_gameObjects.push_back(gameObject);
+	_gameObjects[gameObject->GetLayerTypeInt()].push_back(gameObject);
 }
 void Scene::DespawnGameObject(GameObject* gameObject)
 {
@@ -72,11 +120,15 @@ void Scene::DespawnGameObject(GameObject* gameObject)
 
 GameObject* Scene::FindGameObject(string name)
 {
-	for (GameObject* gameObject : _gameObjects)
+
+	for (vector<GameObject*>& gameobjects : _gameObjects)
 	{
-		if (gameObject->GetName() == name)
+		for (GameObject* gameObject : gameobjects)
 		{
-			return gameObject;
+			if (gameObject->GetName() == name)
+			{
+				return gameObject;
+			}
 		}
 	}
 
@@ -94,8 +146,8 @@ void Scene::RemoveUI(UI* ui)
 	if (findIt != _uis.end())
 	{
 		(*findIt)->Release();
-		UI* deleteUI - (*findIt);
-		SAFE_DELETE(delegateUI);
+		UI* deleteUI = (*findIt);
+		SAFE_DELETE(deleteUI);
 		_uis.erase(findIt);
 	}
 }

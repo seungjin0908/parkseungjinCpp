@@ -3,9 +3,8 @@
 // 미리컴파일된 헤더는 다른 cpp파일 첫번째줄에 
 // #include "pch.h" 를 해줘야한다.
 
-// byte가 C에는 없고 C++에서 생긴거다보니까
-
 #define _HAS_STD_BYTE 0
+//#define USE_SOUND
 
 //==========================================
 //	## Windows Api 구성에 꼭 필요한 헤더 ##
@@ -38,13 +37,12 @@
 using namespace std;
 
 //==========================================
-//	## 사운드 관련 ##
+//	## 사운드관련 ##
 //==========================================
 #include <mmsystem.h>
 #include <dsound.h>
 #pragma comment(lib, "winmm.lib")
 #pragma comment(lib, "dsound.lib")
-using byte = char;
 
 //==========================================
 //	## 자료구조 헤더 ##
@@ -71,6 +69,7 @@ using byte = char;
 #include "Vector2.h"
 #include "Vector2Int.h"
 #include "CenterRect.h"
+#include "AstarNode.h"
 
 
 //==========================================
@@ -90,6 +89,7 @@ using byte = char;
 #include "ResourceManager.h"
 #include "CollisionManager.h"
 #include "SoundManager.h"
+
 
 
 

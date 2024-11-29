@@ -68,3 +68,6 @@ POINT InputManager::GetMousePos()
 {
 	return _mousePos;
 }
+Vector2 InputManager::GetMousePosVector2()
+{
+	return Vector2(_mousePos.x, _mousePos.y);

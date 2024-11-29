@@ -40,19 +40,20 @@ void Panel::Release()
 	}
 	_children.clear();
 }
-
 void Panel::AddChild(UI* ui)
 {
 	if (ui == nullptr) return;
 	ui->SetParent(this);
 	_children.push_back(ui);
 }
-
 void Panel::RemoveChild(UI* ui)
 {
+	if (ui == nullptr) return;
+
 	auto findIt = find(_children.begin(), _children.end(), ui);
 	if (findIt != _children.end())
 	{
+		(*findIt)->SetParent(nullptr);
 		(*findIt)->Release();
 		UI* deleteUI = *findIt;
 		SAFE_DELETE(deleteUI);

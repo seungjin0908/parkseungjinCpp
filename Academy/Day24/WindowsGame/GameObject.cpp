@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include "Component.h"
 #include "Collider.h"
+#include "Scene.h"
 void GameObject::Init()
 {
 }
@@ -46,7 +47,7 @@ void GameObject::AddComponent(Component* component)
 void GameObject::RemoveComponent(Component* component)
 {
 	if (component == nullptr) return;
-	
+
 	auto findIt = find(_components.begin(), _components.end(), component);
 
 	if (findIt != _components.end())
@@ -65,4 +66,12 @@ void GameObject::OnTriggerEnter(Collider* collider, Collider* other)
 void GameObject::OnTriggerExit(Collider* collider, Collider* other)
 {
 	cout << "충돌 끝 : " << collider->GetOwner()->GetName().c_str() << " -> " << other->GetOwner()->GetName().c_str() << endl;
+}
+
+Vector2 GameObject::GetSreenPos()
+{
+	Vector2 pos = this->GetPos();
+	pos -= CurrentScene->GetCameraPos();
+
+	return pos;
 }

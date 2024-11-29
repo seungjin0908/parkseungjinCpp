@@ -1,9 +1,10 @@
 ﻿#include "pch.h"
 #include "SoundManager.h"
-
+#include "Sound.h"
 
 void SoundManager::Init()
 {
+#ifdef USE_SOUND
 	{
 		HRESULT result = DirectSoundCreate(NULL, &_soundDevice, NULL);
 		if (FAILED(result))
@@ -20,20 +21,36 @@ void SoundManager::Init()
 			return;
 		}
 	}
+#endif
 }
-
 void SoundManager::Release()
 {
+#ifdef USE_SOUND
 	if (_soundDevice != nullptr)
 	{
 		_soundDevice->Release();
 	}
+#endif
 }
-
 void SoundManager::Play(const wstring& key, bool loop)
 {
-	// 1. 리소스를 갖고온다.
-	// 2. 실행시킨다.
-
-	Sound* sound = nullptr;
+#ifdef USE_SOUND
+	Sound* sound = Resource->GetSound(key);
+	if (sound == nullptr)
+	{
+		return;
+	}
+	sound->Play(loop);
+#endif
+}
+void SoundManager::Stop(const wstring& key, bool reset)
+{
+#ifdef USE_SOUND
+	Sound* sound = Resource->GetSound(key);
+	if (sound == nullptr)
+	{
+		return;
+	}
+	sound->Stop(reset);
+#endif
 }

@@ -83,7 +83,7 @@ void Day21Ball::Update_Play()
 		//방향벡터는 길이가 1이되도록 유지해준다.
 		//살짝의 난반사가 일어도록 조절
 		Vector2 normalVector = Vector2(-1, 0) * 100 + Vector2(0, Random->GetFloat(0, 0));
-		
+
 		_dir = _dir.Reflect(normalVector.Normalize());
 		_dir = _dir.Normalize();
 	}
@@ -137,7 +137,7 @@ string Day21Ball::ToString()
 	}*/
 	string info;
 	info = format("body.pos.x : {0}\n", this->_body.pos.x);
-	
+
 
 	return info;
 }
@@ -184,7 +184,7 @@ void Day21Ball::OnTriggerEnter(Collider* collider, Collider* other)
 				ballRect.right += 1;
 				ballRect.bottom += 1;
 				RECT tmp;
-				if(IntersectRect(&tmp, &brickRect, &ballRect))
+				if (IntersectRect(&tmp, &brickRect, &ballRect))
 				{
 					printf("collision!\n");
 					int width = tmp.right - tmp.left;

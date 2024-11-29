@@ -43,7 +43,7 @@ enum
 
 class InputManager
 {
-DECLARE_SINGLE(InputManager);
+	DECLARE_SINGLE(InputManager);
 
 public:
 	void Init(HWND hwnd);
@@ -55,6 +55,7 @@ public:
 	bool GetKeyUp(KeyCode key);
 
 	POINT GetMousePos();
+	Vector2 GetMousePosVector2();
 private:
 	// _states['W'] => Press
 	// _states['W'] => Up

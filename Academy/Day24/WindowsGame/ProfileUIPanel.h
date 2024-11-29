@@ -11,17 +11,8 @@ public:
 	virtual void Render(HDC hdc);
 	virtual void Update();
 	virtual void Release();
-
 private:
 	ProfileAreaPanel* _profileAreaPanel = nullptr;
 	Image* _nameImage;
-
-
-
-protected:
-
-public:
-
-
 };
 

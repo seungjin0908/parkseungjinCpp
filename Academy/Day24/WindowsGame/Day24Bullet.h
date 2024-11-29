@@ -27,10 +27,11 @@ public:
 
 public:
 	void SetState(EDay24BulletState state);
-	void SetDir(Vector2 dir) { _dir = dir; }
+	void SetInfo(Day24BulletInfo info) { _info = info; }
 private:
 	EDay24BulletState _state = EDay24BulletState::None;
-	Vector2 _dir = {};
-	float _speed = 0;
+	Day24BulletInfo _info;
+
+	float _moveDistance = 0;
 };
 

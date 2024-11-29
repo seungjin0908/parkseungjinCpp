@@ -16,8 +16,9 @@ public:
 	inline string GetName() { return _name; }
 	inline void SetName(string name) { _name = name; }
 
-	inline Vector2 GetPos() { return _body.pos; }
-	inline void SetPos(Vector2 pos) { _body.pos = pos; }
+	inline virtual Vector2 GetPos() { return _body.pos; }
+	Vector2 GetSreenPos();
+	inline virtual void SetPos(Vector2 pos) { _body.pos = pos; }
 
 	inline void SetWidth(float width) { _body.width = width; }
 	inline float GetWidth() { return _body.width; }
@@ -27,6 +28,7 @@ public:
 
 	inline void SetLayerType(LayerType layerType) { _layerType = layerType; }
 	inline LayerType GetLayerType() { return _layerType; }
+	inline int GetLayerTypeInt() { return static_cast<int>(_layerType); }
 
 public:
 	virtual void Init();

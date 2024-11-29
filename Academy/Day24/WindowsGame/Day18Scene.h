@@ -18,7 +18,7 @@ public:
 
 public:
 	// 씬의 상태에 따라서 Update_Ready를 돌지, Update_Play를 돌지 결정한다.
-	void Update_Ready();	
+	void Update_Ready();
 	void Update_Play();
 
 

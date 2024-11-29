@@ -1,6 +1,8 @@
 ﻿#include "pch.h"
 #include "BoxCollider.h"
+#include "CircleCollider.h"
 #include "GameObject.h"
+#include "Scene.h"
 void BoxCollider::Init()
 {
 	Super::Init();
@@ -10,7 +12,11 @@ void BoxCollider::Render(HDC hdc)
 	Super::Render(hdc);
 
 #ifdef _DEBUG
-	this->GetCollision().Draw(hdc);
+	CenterRect drawRect = this->GetCollision();
+	Vector2 cameraPos = CurrentScene->GetCameraPos();
+
+	drawRect.pos -= cameraPos;
+	drawRect.Draw(hdc);
 #endif
 }
 void BoxCollider::Update()
@@ -33,9 +39,15 @@ bool BoxCollider::CheckCollision(Collider* other)
 	{
 	case ColliderType::Circle:
 	{
-		return false;
+		CircleCollider* otherCollider = static_cast<CircleCollider*>(other);
+		CenterRect myCollision = this->GetCollision();
+
+		Vector2 circlePos1 = otherCollider->GetCollisionPos();
+		float circleRadius1 = otherCollider->GetRadius();
+
+		return Collision::RectInCircle(myCollision, circlePos1, circleRadius1);
 	}
-		break;
+	break;
 	case ColliderType::Box:
 	{
 		BoxCollider* otherCollider = static_cast<BoxCollider*>(other);
@@ -43,7 +55,7 @@ bool BoxCollider::CheckCollision(Collider* other)
 
 		return Collision::RectInRect(this->GetCollision(), otherCollision);
 	}
-		break;
+	break;
 	default:
 		return false;
 		break;

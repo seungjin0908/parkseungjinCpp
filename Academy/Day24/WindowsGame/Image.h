@@ -1,9 +1,27 @@
 ﻿#pragma once
 #include "UI.h"
-
 class Image : public UI
 {
-	DECLARE_CHILD(Image,UI)
+	DECLARE_CHILD(Image, UI)
+
+public:
+	void SetSprite(Sprite* sprite) { _sprite = sprite; }
+
+public:
+	virtual void Init();
+	virtual void Render(HDC hdc);
+	virtual void Update();
+	virtual void Release();
+
+protected:
+	Sprite* _sprite = nullptr;
+};
+
+#pragma once
+#include "UI.h"
+class Image : public UI
+{
+	DECLARE_CHILD(Image, UI)
 
 public:
 	void SetSprite(Sprite* sprite) { _sprite = sprite; }

@@ -14,6 +14,5 @@ public:
 private:
 	Image* _profileImage = nullptr;
 	Image* _plusImage = nullptr;
-public:
 };
 

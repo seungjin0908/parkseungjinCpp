@@ -50,10 +50,10 @@
     <Filter Include="02.Objects\Day27">
       <UniqueIdentifier>{0be15617-c2ba-4a3d-ace3-09a95fbf1fef}</UniqueIdentifier>
     </Filter>
-    <Filter Include="06.UI">
+    <Filter Include="06.UIS">
       <UniqueIdentifier>{de25e8e6-5e4b-421c-9b1c-e86fd2d79985}</UniqueIdentifier>
     </Filter>
-    <Filter Include="06.UI\Day34">
+    <Filter Include="06.UIS\Day34">
       <UniqueIdentifier>{a35cdd9e-c3f2-404c-8bf8-b4f8c7241eba}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -221,22 +221,22 @@
       <Filter>03.Scenes\Game</Filter>
     </ClCompile>
     <ClCompile Include="UI.cpp">
-      <Filter>06.UI</Filter>
+      <Filter>06.UIS</Filter>
     </ClCompile>
     <ClCompile Include="Image.cpp">
-      <Filter>06.UI</Filter>
+      <Filter>06.UIS</Filter>
     </ClCompile>
     <ClCompile Include="Day34Scene.cpp">
       <Filter>03.Scenes\Game</Filter>
     </ClCompile>
     <ClCompile Include="Panel.cpp">
-      <Filter>06.UI</Filter>
+      <Filter>06.UIS</Filter>
     </ClCompile>
     <ClCompile Include="ProfileUIPanel.cpp">
-      <Filter>06.UI\Day34</Filter>
+      <Filter>06.UIS\Day34</Filter>
     </ClCompile>
     <ClCompile Include="ProfileAreaPanel.cpp">
-      <Filter>06.UI\Day34</Filter>
+      <Filter>06.UIS\Day34</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -510,22 +510,22 @@
       <Filter>03.Scenes\Game</Filter>
     </ClInclude>
     <ClInclude Include="UI.h">
-      <Filter>06.UI</Filter>
+      <Filter>06.UIS</Filter>
     </ClInclude>
     <ClInclude Include="Image.h">
-      <Filter>06.UI</Filter>
+      <Filter>06.UIS</Filter>
     </ClInclude>
     <ClInclude Include="Day34Scene.h">
       <Filter>03.Scenes\Game</Filter>
     </ClInclude>
     <ClInclude Include="Panel.h">
-      <Filter>06.UI</Filter>
+      <Filter>06.UIS</Filter>
     </ClInclude>
     <ClInclude Include="ProfileUIPanel.h">
-      <Filter>06.UI\Day34</Filter>
+      <Filter>06.UIS\Day34</Filter>
     </ClInclude>
     <ClInclude Include="ProfileAreaPanel.h">
-      <Filter>06.UI\Day34</Filter>
+      <Filter>06.UIS\Day34</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

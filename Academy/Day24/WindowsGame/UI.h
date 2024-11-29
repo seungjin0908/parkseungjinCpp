@@ -34,4 +34,3 @@ protected:
 	bool _isShow = true;
 	Panel* _parent = nullptr;
 };
-

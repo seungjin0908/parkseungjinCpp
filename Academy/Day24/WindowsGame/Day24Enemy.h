@@ -10,8 +10,9 @@ enum class EDay24EnemyState
 struct Day24EnemyInfo
 {
 	float Hp;
-
 };
+
+class Day24Bullet;
 class Day24Enemy : public GameObject
 {
 	DECLARE_CHILD(Day24Enemy, GameObject);
@@ -31,11 +32,11 @@ public:
 	void SetInfo(Day24EnemyInfo info) { _info = info; }
 
 public:
-	virtual void OnDamaged(Day24Bullet* bullet);
+	void OnDamaged(Day24Bullet* bullet);
 
 public:
 	virtual void OnTriggerEnter(Collider* collider, Collider* other);
-	
+
 private:
 	EDay24EnemyState _state;
 	Day24EnemyInfo _info;

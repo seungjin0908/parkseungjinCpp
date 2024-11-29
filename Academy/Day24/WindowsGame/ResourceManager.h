@@ -5,6 +5,7 @@ class Texture;
 class Sprite;
 class Flipbook;
 class Tilemap;
+class Sound;
 class ResourceManager
 {
 	DECLARE_SINGLE(ResourceManager);
@@ -23,11 +24,11 @@ public:
 	Flipbook* CreateFlipbook(const wstring& key, FlipbookInfo info);
 	Flipbook* GetFlipbook(const wstring& key);
 
-	Tilemap* LoadTilemap(const wstring& key, const wstring& path);
+	Tilemap* LoadTilemap(const wstring& key, const wstring& path, vector<Sprite*> sprites);
 	Tilemap* GetTilemap(const wstring& key);
 
-	Sound* GetSound(const wstring& sound);
-	Sound* LoadSound(const wstring& sound, const wstring& path);
+	Sound* GetSound(const wstring& key);
+	Sound* LoadSound(const wstring& key, const wstring& path);
 
 private:
 	wstring _resourcePath;

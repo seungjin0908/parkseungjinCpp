@@ -32,14 +32,15 @@ public:
 public:
 	void SetFlipbook();
 
-	inline virtual void SetPos(Vector2 pos) override { _body.pos = pos + Vector2(0, 30); }
-	inline virtual void Vector2 GetPos()
+	// Offset 설정을 위해 override
+	inline virtual void SetPos(Vector2 pos) override { _body.pos = pos; }
 
 	void SetTilePos(Vector2Int pos) { _tilePos = pos; }
 	Vector2Int GetTilePos() { return _tilePos; }
 
+
 public: // 움직임 관련
-	void SetPath(vector<Vector2Int>paths);
+	void SetPath(vector<Vector2> paths);
 	bool HasReachedDest();
 
 private:
@@ -48,10 +49,11 @@ private:
 	FlipbookRenderer* _flipbookRenderer = nullptr;
 	Vector2 _inputDir = {};
 	Vector2Int _tilePos;
+	wstring _currentFilpbookName;
 
-private:
+private: // 움직임 관련
 	float _speed = 100.0f;
-	vector<Vector2Int> _paths;
+	vector<Vector2> _paths;
 	int _pathIndex = 0;
-
 };
+

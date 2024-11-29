@@ -1,9 +1,11 @@
 ﻿#include "pch.h"
 #include "Day24Scene.h"
 #include "Day24Creature.h"
-#include "Day24Bullet.h"
 #include "SpriteRenderer.h"
 #include "BoxRenderer.h"
+#include "CameraComponent.h"
+#include "Day24Bullet.h"
+#include "Day24Enemy.h"
 void Day24Scene::Init()
 {
 	Super::Init();
@@ -12,27 +14,42 @@ void Day24Scene::Init()
 	{
 		GameObject* gameObject = new GameObject();
 		gameObject->SetBody(CenterRect::MakeLTWH(0, 0, 1365, 616));
-	}
-	{
-		Texture* texture = Resource->LoadTexture(L"T_Ball", L"Day24/playerDown.bmp");
-		Resource->CreateSprite(L"S_Ball", texture,0,0,200,200);
-	}
-
-	{
-		GameObject* gameObject = new GameObject();
-		CenterRect rect = CenterRect(WIN_SIZE_X / 2, WIN_SIZE_Y / 2, 100, 100);
-		gameObject->SetBody(rect);
 		{
 			SpriteRenderer* component = new SpriteRenderer();
 			SpriteRendererInfo info;
-			info.SpriteKey = L"S_Ball";
+			info.SpriteKey = L"S_Background";
 			component->SetInfo(info);
-
 			gameObject->AddComponent(component);
 		}
-		_gameObject = gameObject;
 		this->SpawnGameObject(gameObject);
 	}
+	this->SetCameraArea(CenterRect::MakeLTWH(0, 0, 1365, 616));
+
+	{
+		Day24Creature* gameObject = new Day24Creature();
+		gameObject->Init();
+		{
+			CameraComponent* component = new CameraComponent();
+			gameObject->AddComponent(component);
+		}
+		this->SpawnGameObject(gameObject);
+		_creature = gameObject;
+	}
+
+	{
+		GameObject* gameObject = new Day24Enemy();
+		gameObject->Init();
+		gameObject->SetPos({ 550, 200 });
+		this->SpawnGameObject(gameObject);
+	}
+
+	//총알 진짜 생성되는지 테스트해보는 코드
+	//{
+	//	Day24Bullet* gameObject = new Day24Bullet();
+	//	gameObject->Init();
+	//	gameObject->SetPos({ 400, 400 });
+	//	this->SpawnGameObject(gameObject);
+	//}
 }
 void Day24Scene::Render(HDC hdc)
 {
@@ -48,43 +65,43 @@ void Day24Scene::Update()
 {
 	Super::Update();
 
-	
-
-	if (Input->GetKey(KeyCode::W))
+#pragma region 방향키 인풋처리
 	{
-		//this->_body.pos += dir * _speed * Time->GetDeltaTime();
-		//this->_body.pos = this->_body.pos + dir * _speed * Time->GetDeltaTime();
-		
-		int a;
-		a = 5;
-		Vector2 dir;
-		dir = Vector2(0, -1);
-		_gameObject->SetPos(_gameObject->GetPos() + dir * 100 * Time->GetDeltaTime()); //위쪽방향
+		Vector2 inputDir = {};
+		if (Input->GetKey(KeyCode::W))
+		{
+			inputDir.y -= 1;
+		}
+		if (Input->GetKey(KeyCode::S))
+		{
+			inputDir.y += 1;
+		}
+		if (Input->GetKey(KeyCode::A))
+		{
+			inputDir.x -= 1;
+		}
+		if (Input->GetKey(KeyCode::D))
+		{
+			inputDir.x += 1;
+		}
+		inputDir = inputDir.Normalize();
+		_creature->SetInputDir(inputDir);
+	}
+#pragma endregion
 
 
+
+	if (Input->GetKeyDown(KeyCode::LeftMouse))
+	{
+		Vector2 dir = Input->GetMousePosVector2() - _creature->GetSreenPos();
+		dir = dir.Normalize();
+		_creature->Shoot(dir);
 	}
 
-	if (Input->GetKey(KeyCode::S))
+	if (Input->GetKeyDown(KeyCode::J))
 	{
-		Vector2 dir;
-		dir = Vector2(0,1);
-		_gameObject->SetPos(_gameObject->GetPos() + dir * 100 * Time->GetDeltaTime()); //아래방향
+		_cameraPosition = { 500, 5 };
 	}
-
-	if (Input->GetKey(KeyCode::D))
-	{
-		Vector2 dir;
-		dir = Vector2(1, 0);
-		_gameObject->SetPos(_gameObject->GetPos() + dir * 100 * Time->GetDeltaTime()); // 오른쪽방향
-	}
-
-	if (Input->GetKey(KeyCode::A))
-	{
-		Vector2 dir;
-		dir = Vector2(-1, 0);
-		_gameObject->SetPos(_gameObject->GetPos() + dir * 100 * Time->GetDeltaTime()); // 왼쪽방향
-	}
-
 }
 void Day24Scene::Release()
 {

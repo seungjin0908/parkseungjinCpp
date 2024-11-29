@@ -30,15 +30,15 @@ Texture* Texture::LoadBmp(const wstring& path)
 void Texture::Render(HDC hdc, int x, int y)
 {
 	::TransparentBlt(hdc,
-		x, 
-		y, 
-		this->GetSize().x, 
-		this->GetSize().y, 
-		this->GetDC(), 
-		0, 
-		0, 
-		this->GetSize().x, 
-		this->GetSize().y, 
+		x,
+		y,
+		this->GetSize().x,
+		this->GetSize().y,
+		this->GetDC(),
+		0,
+		0,
+		this->GetSize().x,
+		this->GetSize().y,
 		this->GetTransparent()
 	);
 }

@@ -10,11 +10,11 @@ void Image::Render(HDC hdc)
 {
 	Super::Render(hdc);
 
-	if (_isShow == false)return;
-	if (_sprite == nullptr)return;
+	if (_isShow == false) return;
+	if (_sprite == nullptr) return;
 
 	Panel* parent = this->GetParent();
-	Vector2 renderPos = { _pos.x,_pos.y };
+	Vector2 renderPos = { _pos.x, _pos.y };
 	while (parent != nullptr)
 	{
 		renderPos += parent->GetPos();

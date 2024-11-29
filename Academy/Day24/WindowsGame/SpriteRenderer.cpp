@@ -26,7 +26,7 @@ void SpriteRenderer::Render(HDC hdc)
 		static_cast<int>(pos.y + _info.Offset.y - cameraPos.y)
 	};
 
-	sprite->Render(hdc, static_cast<int>(pos.x + _info.Offset.x), static_cast<int>(pos.y + _info.Offset.y));
+	sprite->Render(hdc, renderPos.x, renderPos.y);
 }
 void SpriteRenderer::Update()
 {

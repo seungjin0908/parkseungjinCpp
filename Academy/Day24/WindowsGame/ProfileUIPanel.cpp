@@ -6,9 +6,9 @@ void ProfileUIPanel::Init()
 {
 	Super::Init();
 	Resource->LoadTexture(L"T_ImageText", L"Day34/Image_Text.bmp", RGB(255, 255, 255));
-	Resource->CreateSprite(L"S_ImageText",Resource->GetTexture(L"T_ImageText"));
+	Resource->CreateSprite(L"S_ImageText", Resource->GetTexture(L"T_ImageText"));
 
-	this->SetSize({ 250,250 });
+	this->SetSize({ 250, 250 });
 
 	{
 		_profileAreaPanel = new ProfileAreaPanel();
@@ -19,7 +19,8 @@ void ProfileUIPanel::Init()
 	{
 		_nameImage = new Image();
 		_nameImage->Init();
-		_nameImage->SetSprite();
+		_nameImage->SetPos({ 0, 150 });
+		_nameImage->SetSprite(Resource->GetSprite(L"S_ImageText"));
 		this->AddChild(_nameImage);
 	}
 }

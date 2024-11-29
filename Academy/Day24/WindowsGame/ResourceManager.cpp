@@ -63,7 +63,7 @@ Sprite* ResourceManager::CreateSprite(const wstring& key, Texture* texture, int 
 		cy = texture->GetSize().y;
 	}
 
-	Sprite* sprite = new Sprite(texture, x, y , cx, cy);
+	Sprite* sprite = new Sprite(texture, x, y, cx, cy);
 	_resources[key] = sprite;
 
 	return sprite;
@@ -91,29 +91,42 @@ Flipbook* ResourceManager::GetFlipbook(const wstring& key)
 	return dynamic_cast<Flipbook*>(_resources[key]);
 }
 
-Tilemap* ResourceManager::LoadTilemap(const wstring& key, const wstring& path)
+Tilemap* ResourceManager::LoadTilemap(const wstring& key, const wstring& path, vector<Sprite*> sprites)
 {
-	if (_resources.contains(key)
+	if (_resources.contains(key))
 	{
 		return GetTilemap(key);
 	}
 
-	Tilemap* tilemap=new Tilemap();
-	tile
+	wstring fullPath = _resourcePath + path;
+	Tilemap* tilemap = new Tilemap();
+	tilemap->LoadFile(fullPath);
+	tilemap->SetSprites(sprites);
+	_resources[key] = tilemap;
+
 	return tilemap;
 }
-
 Tilemap* ResourceManager::GetTilemap(const wstring& key)
 {
-	return nullptr;
+	return dynamic_cast<Tilemap*>(_resources[key]);
 }
 
-Sound* ResourceManager::LoadSound(const wstring& sound, const wstring& path)
+
+Sound* ResourceManager::LoadSound(const wstring& key, const wstring& path)
 {
-	return nullptr;
+	if (_resources.contains(key))
+	{
+		return GetSound(key);
+	}
+
+	wstring fullPath = _resourcePath + path;
+	Sound* sound = new Sound();
+	sound->LoadWave(fullPath);
+	_resources[key] = sound;
+	return sound;
 }
 
-Sound* ResourceManager::GetSound(const wstring& sound)
+Sound* ResourceManager::GetSound(const wstring& key)
 {
-	return nullptr;
+	return dynamic_cast<Sound*>(_resources[key]);
 }

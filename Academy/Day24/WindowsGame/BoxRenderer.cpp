@@ -11,7 +11,10 @@ void BoxRenderer::Render(HDC hdc)
 	Super::Render(hdc);
 
 	Vector2 cameraPos = CurrentScene->GetCameraPos();
-	this->GetOwner()->GetBody().Draw(hdc, DRAWTYPE_RECT, _info.Brush);
+	CenterRect drawCenterRect = this->GetOwner()->GetBody();
+	drawCenterRect.pos -= cameraPos;
+
+	drawCenterRect.Draw(hdc, DRAWTYPE_RECT, _info.Brush);
 }
 void BoxRenderer::Update()
 {
