@@ -39,6 +39,7 @@
     <None Include="Comment03.md" />
     <None Include="Comment04.md" />
     <None Include="Comment05.md" />
+    <None Include="Comment06.md" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

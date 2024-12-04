@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\bin\Debug\net8.0\CSharp_Day38.exe
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\bin\Debug\net8.0\CSharp_Day38.deps.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\bin\Debug\net8.0\CSharp_Day38.runtimeconfig.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\bin\Debug\net8.0\CSharp_Day38.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\bin\Debug\net8.0\CSharp_Day38.pdb
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.sourcelink.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\refint\CSharp_Day38.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.pdb
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\CSharp_Day38.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day38\obj\Debug\net8.0\ref\CSharp_Day38.dll
