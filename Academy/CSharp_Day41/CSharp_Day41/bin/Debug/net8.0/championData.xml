@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfChampionData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChampionData>
+    <Id>1</Id>
+    <Name>가렌</Name>
+    <Skills>
+      <SkillData>
+        <Id>10001</Id>
+        <Name>가렌 Q 스킬 이름</Name>
+      </SkillData>
+      <SkillData>
+        <Id>10002</Id>
+        <Name>가렌 W 스킬 이름</Name>
+      </SkillData>
+      <SkillData>
+        <Id>10003</Id>
+        <Name>가렌 E 스킬 이름</Name>
+      </SkillData>
+      <SkillData>
+        <Id>10004</Id>
+        <Name>가렌 R 스킬 이름</Name>
+      </SkillData>
+    </Skills>
+  </ChampionData>
+</ArrayOfChampionData>

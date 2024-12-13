@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\bin\Debug\net8.0\CSharp_Day37.exe
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\bin\Debug\net8.0\CSharp_Day37.deps.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\bin\Debug\net8.0\CSharp_Day37.runtimeconfig.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\bin\Debug\net8.0\CSharp_Day37.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\bin\Debug\net8.0\CSharp_Day37.pdb
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.sourcelink.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\refint\CSharp_Day37.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.pdb
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\CSharp_Day37.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day41\CSharp_Day37\obj\Debug\net8.0\ref\CSharp_Day37.dll
