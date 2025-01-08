@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Comment">
+      <UniqueIdentifier>{c24c1b0f-4f23-4e1f-90c7-896d3f89bfd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.MainGame">
+      <UniqueIdentifier>{6553aa0b-8711-4090-80e8-f98b9fb2e335}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Utils">
+      <UniqueIdentifier>{03551ffc-c4d3-4953-a1aa-0f4a37b72a68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="99.Utils\Types">
+      <UniqueIdentifier>{b299613e-3456-41b1-bc03-d3d7e40dbeec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Managers">
+      <UniqueIdentifier>{20c3a18b-3d27-487a-a009-b54084818d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects">
+      <UniqueIdentifier>{9e809d43-93b2-47b1-8c35-82b0d119e09b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Scenes">
+      <UniqueIdentifier>{f7c251b8-6eda-4d1a-b466-322ba8d73b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Scenes\Game">
+      <UniqueIdentifier>{f5cd6a63-cfbf-4522-938a-0bda37f892b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Resources">
+      <UniqueIdentifier>{a067e624-f1aa-431a-9f6c-2b813ffd8781}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day17">
+      <UniqueIdentifier>{c435ffda-6fa7-4ac7-8eed-e588df9f2ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day19">
+      <UniqueIdentifier>{9a130c17-b066-4c1e-b2c6-ccee3e0ba5e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Components">
+      <UniqueIdentifier>{91ffdbf1-fbd4-46bb-94cf-5203d9f204fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day21">
+      <UniqueIdentifier>{b5b7210f-4b5a-4300-9fb0-2d316b62f108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day24">
+      <UniqueIdentifier>{9112850a-ac2a-4f03-b2a3-b12635c66983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day27">
+      <UniqueIdentifier>{a031a371-43e2-4935-98fd-1d8e08d9af9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.UIs">
+      <UniqueIdentifier>{9b2b5020-ca3a-478b-b2a6-cb4b6616f92b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.UIs\Day34">
+      <UniqueIdentifier>{ea1ed76c-51b9-48b9-9f8a-44ecad7c14d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.UIs\Day35">
+      <UniqueIdentifier>{fc462479-1d1f-4f18-95fd-80db8e192afa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07.GameEvents">
+      <UniqueIdentifier>{3acdb404-e141-4bf4-9c72-6bb6e7292ec9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Objects\Day36">
+      <UniqueIdentifier>{b9efac8b-41d2-4d0d-be48-79de80320360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08.Data">
+      <UniqueIdentifier>{a4c58673-b298-4b6e-88b5-61fbe86a1474}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Managers\Day48">
+      <UniqueIdentifier>{0d77b93c-1610-4e72-9db4-8f86c5cdabe5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WindowsMain.cpp">
+      <Filter>00.MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>99.Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CommonFunction.cpp">
+      <Filter>99.Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="CenterRect.cpp">
+      <Filter>99.Utils\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2.cpp">
+      <Filter>99.Utils\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>00.MainGame</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>03.Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="DevScene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day18Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceBase.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector2Int.cpp">
+      <Filter>99.Utils\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Box.cpp">
+      <Filter>02.Objects\Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day17Player.cpp">
+      <Filter>02.Objects\Day17</Filter>
+    </ClCompile>
+    <ClCompile Include="Day19Stone.cpp">
+      <Filter>02.Objects\Day19</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>02.Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Paddle.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Ball.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21Brick.cpp">
+      <Filter>02.Objects\Day21</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Flipbook.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipbookRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Creature.cpp">
+      <Filter>02.Objects\Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraComponent.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Bullet.cpp">
+      <Filter>02.Objects\Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24Enemy.cpp">
+      <Filter>02.Objects\Day24</Filter>
+    </ClCompile>
+    <ClCompile Include="Tilemap.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day26Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="TilemapRenderer.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Day27Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day27Creature.cpp">
+      <Filter>02.Objects\Day27</Filter>
+    </ClCompile>
+    <ClCompile Include="AstarNode.cpp">
+      <Filter>99.Utils\Types</Filter>
+    </ClCompile>
+    <ClCompile Include="CircleCollider.cpp">
+      <Filter>05.Components</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Day33Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cpp">
+      <Filter>06.UIs</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>06.UIs</Filter>
+    </ClCompile>
+    <ClCompile Include="Day34Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Panel.cpp">
+      <Filter>06.UIs</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileUIPanel.cpp">
+      <Filter>06.UIs\Day34</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfileAreaPanel.cpp">
+      <Filter>06.UIs\Day34</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>06.UIs</Filter>
+    </ClCompile>
+    <ClCompile Include="Day35Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResultPanel.cpp">
+      <Filter>06.UIs\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="GameResultCardPanel.cpp">
+      <Filter>06.UIs\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonPanel.cpp">
+      <Filter>06.UIs\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="CompletePanel.cpp">
+      <Filter>06.UIs\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="ScorePanel.cpp">
+      <Filter>06.UIs\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="StarPanel.cpp">
+      <Filter>06.UIs\Day35</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEventManager.cpp">
+      <Filter>01.Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEvent.cpp">
+      <Filter>07.GameEvents</Filter>
+    </ClCompile>
+    <ClCompile Include="Day36Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Day36Boss.cpp">
+      <Filter>02.Objects\Day36</Filter>
+    </ClCompile>
+    <ClCompile Include="Day36Character.cpp">
+      <Filter>02.Objects\Day36</Filter>
+    </ClCompile>
+    <ClCompile Include="Day36SystemChat.cpp">
+      <Filter>02.Objects\Day36</Filter>
+    </ClCompile>
+    <ClCompile Include="Day36FieldSystem.cpp">
+      <Filter>02.Objects\Day36</Filter>
+    </ClCompile>
+    <ClCompile Include="Day48Scene.cpp">
+      <Filter>03.Scenes\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Data.cpp">
+      <Filter>08.Data</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>01.Managers\Day48</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Comment01.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment02.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment03.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment04.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment05.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment06.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment07.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment08.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment09.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment10.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment11.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment12.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment13.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment14.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment15.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment16.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment17.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment18.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment19.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment20.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment21.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment22.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment23.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment24.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment25-길찾기 알고리즘 정리.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment26.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment27.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment28.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment29.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment30.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment31.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment33.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment32.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment34.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment35.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment36.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment37.md">
+      <Filter>Comment</Filter>
+    </None>
+    <None Include="Comment38.md">
+      <Filter>Comment</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h">
+      <Filter>99.Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFunction.h">
+      <Filter>99.Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>99.Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CenterRect.h">
+      <Filter>99.Utils\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2.h">
+      <Filter>99.Utils\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>00.MainGame</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Types.h">
+      <Filter>99.Utils\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>03.Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>99.Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DevScene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day18Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceBase.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2Int.h">
+      <Filter>99.Utils\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Box.h">
+      <Filter>02.Objects\Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day17Player.h">
+      <Filter>02.Objects\Day17</Filter>
+    </ClInclude>
+    <ClInclude Include="Day19Stone.h">
+      <Filter>02.Objects\Day19</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>02.Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Paddle.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Ball.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21Brick.h">
+      <Filter>02.Objects\Day21</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Flipbook.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="FlipbookRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Creature.h">
+      <Filter>02.Objects\Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraComponent.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Bullet.h">
+      <Filter>02.Objects\Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24Enemy.h">
+      <Filter>02.Objects\Day24</Filter>
+    </ClInclude>
+    <ClInclude Include="Tilemap.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day26Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="TilemapRenderer.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Day27Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day27Creature.h">
+      <Filter>02.Objects\Day27</Filter>
+    </ClInclude>
+    <ClInclude Include="AstarNode.h">
+      <Filter>99.Utils\Types</Filter>
+    </ClInclude>
+    <ClInclude Include="CircleCollider.h">
+      <Filter>05.Components</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>04.Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Day33Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>06.UIs</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.h">
+      <Filter>06.UIs</Filter>
+    </ClInclude>
+    <ClInclude Include="Day34Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Panel.h">
+      <Filter>06.UIs</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileUIPanel.h">
+      <Filter>06.UIs\Day34</Filter>
+    </ClInclude>
+    <ClInclude Include="ProfileAreaPanel.h">
+      <Filter>06.UIs\Day34</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>06.UIs</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Day35Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResultPanel.h">
+      <Filter>06.UIs\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="GameResultCardPanel.h">
+      <Filter>06.UIs\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonPanel.h">
+      <Filter>06.UIs\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="CompletePanel.h">
+      <Filter>06.UIs\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="ScorePanel.h">
+      <Filter>06.UIs\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="StarPanel.h">
+      <Filter>06.UIs\Day35</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEventManager.h">
+      <Filter>01.Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEvent.h">
+      <Filter>07.GameEvents</Filter>
+    </ClInclude>
+    <ClInclude Include="Day36Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Day36Boss.h">
+      <Filter>02.Objects\Day36</Filter>
+    </ClInclude>
+    <ClInclude Include="Day36Character.h">
+      <Filter>02.Objects\Day36</Filter>
+    </ClInclude>
+    <ClInclude Include="Day36SystemChat.h">
+      <Filter>02.Objects\Day36</Filter>
+    </ClInclude>
+    <ClInclude Include="Day36FieldSystem.h">
+      <Filter>02.Objects\Day36</Filter>
+    </ClInclude>
+    <ClInclude Include="Day48Scene.h">
+      <Filter>03.Scenes\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="IData.h">
+      <Filter>08.Data</Filter>
+    </ClInclude>
+    <ClInclude Include="Data.h">
+      <Filter>08.Data</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>01.Managers\Day48</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WindowsGame.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
