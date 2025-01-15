@@ -8,6 +8,7 @@ class Tilemap;
 class Sound;
 class DXText;
 struct DXTextInfo;
+class DXSprite; 
 class ResourceManager
 {
 	DECLARE_SINGLE(ResourceManager);

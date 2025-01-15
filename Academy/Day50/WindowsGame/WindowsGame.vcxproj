@@ -287,6 +287,7 @@
     <ClCompile Include="Day36SystemChat.cpp" />
     <ClCompile Include="Day48Scene.cpp" />
     <ClCompile Include="DevScene.cpp" />
+    <ClCompile Include="DXSprite.cpp" />
     <ClCompile Include="DXText.cpp" />
     <ClCompile Include="DXTextRenderer.cpp" />
     <ClCompile Include="Flipbook.cpp" />
@@ -413,6 +414,7 @@
     <ClInclude Include="Day48Scene.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="DevScene.h" />
+    <ClInclude Include="DXSprite.h" />
     <ClInclude Include="DXText.h" />
     <ClInclude Include="DXTextRenderer.h" />
     <ClInclude Include="Enums.h" />

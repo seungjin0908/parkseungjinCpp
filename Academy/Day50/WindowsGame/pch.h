@@ -43,6 +43,7 @@ using namespace rapidjson;
 #include <string>
 #include <fstream>
 #include <functional>
+#include <wincodec.h>
 
 //==========================================
 //	## 자료구조 헤더 ##

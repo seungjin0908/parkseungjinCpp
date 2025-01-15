@@ -1,0 +1,15 @@
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\bin\Debug\net8.0\CSharp_Day52.exe
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\bin\Debug\net8.0\CSharp_Day52.deps.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\bin\Debug\net8.0\CSharp_Day52.runtimeconfig.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\bin\Debug\net8.0\CSharp_Day52.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\bin\Debug\net8.0\CSharp_Day52.pdb
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.sourcelink.json
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\refint\CSharp_Day52.dll
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.pdb
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\CSharp_Day52.genruntimeconfig.cache
+C:\Users\user\Documents\GitHub\parkseungjinCpp\Academy\CSharp_Day51_1\CSharp_Day52\obj\Debug\net8.0\ref\CSharp_Day52.dll

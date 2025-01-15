@@ -316,6 +316,9 @@
     <ClCompile Include="DXTextRenderer.cpp">
       <Filter>05.Components\DirectX</Filter>
     </ClCompile>
+    <ClCompile Include="DXSprite.cpp">
+      <Filter>04.Resources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Comment01.md">
@@ -686,6 +689,9 @@
     </ClInclude>
     <ClInclude Include="DXTextRenderer.h">
       <Filter>05.Components\DirectX</Filter>
+    </ClInclude>
+    <ClInclude Include="DXSprite.h">
+      <Filter>04.Resources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
