@@ -10,5 +10,8 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Comment01.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment02.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment03.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment04.md" />
   </ItemGroup>
 </Project>
