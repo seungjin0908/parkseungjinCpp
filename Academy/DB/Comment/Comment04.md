@@ -17,7 +17,7 @@ Server도 C#이나 C++로 만들건데,
 
 SQL로 안하고, 코드로 바로 DB를 접근하는 방법이 생겼다.
 
-ORM (Object Relational Mapping)
+ORM이란 (Object Relational Mapping)
  SQL로 DB를 접근하는게 아니라
  코드로 DB를 접근하는 코드를 치면
  알아서 SQL롤 변환해서 DB에서 필요한 조작을 하게해주는 라이브러리

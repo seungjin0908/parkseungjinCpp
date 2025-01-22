@@ -3,7 +3,7 @@
   <PropertyGroup>
     <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>7d9fcf01-45e0-437a-9e70-d4fb65882980</SharedGUID>
+    <SharedGUID>d1c7cec6-ecfd-4d96-80a3-ef5d5c3f98b3</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>Comment</Import_RootNamespace>
@@ -11,8 +11,5 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Comment01.md" />
     <None Include="$(MSBuildThisFileDirectory)Comment02.md" />
-    <None Include="$(MSBuildThisFileDirectory)Comment03.md" />
-    <None Include="$(MSBuildThisFileDirectory)Comment04.md" />
-    <None Include="$(MSBuildThisFileDirectory)Comment05.md" />
   </ItemGroup>
 </Project>

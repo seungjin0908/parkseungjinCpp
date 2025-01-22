@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{1B0AD419-ED50-4E60-97B8-8008F951F2F9}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Comment", "Comment\Comment.shproj", "{D1C7CEC6-ECFD-4D96-80A3-EF5D5C3F98B3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B0AD419-ED50-4E60-97B8-8008F951F2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0AD419-ED50-4E60-97B8-8008F951F2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0AD419-ED50-4E60-97B8-8008F951F2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0AD419-ED50-4E60-97B8-8008F951F2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC2A5AC4-2C27-42C5-9E9B-AC2C0ECD0567}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Comment\Comment.projitems*{d1c7cec6-ecfd-4d96-80a3-ef5d5c3f98b3}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal
