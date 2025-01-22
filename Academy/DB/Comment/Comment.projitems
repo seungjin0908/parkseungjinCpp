@@ -14,5 +14,8 @@
     <None Include="$(MSBuildThisFileDirectory)Comment03.md" />
     <None Include="$(MSBuildThisFileDirectory)Comment04.md" />
     <None Include="$(MSBuildThisFileDirectory)Comment05.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment06_DLL.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment07.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment08.md" />
   </ItemGroup>
 </Project>
