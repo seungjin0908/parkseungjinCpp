@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d1c7cec6-ecfd-4d96-80a3-ef5d5c3f98b3</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Comment</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Comment01.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment02.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment03.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment04.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment05.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment06_DLL설명.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment07.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment08.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment09.md" />
+    <None Include="$(MSBuildThisFileDirectory)Comment10.md" />
+  </ItemGroup>
+</Project>
