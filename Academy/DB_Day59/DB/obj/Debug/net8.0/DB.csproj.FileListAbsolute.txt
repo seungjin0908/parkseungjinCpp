@@ -1,0 +1,15 @@
+C:\Works\202408\sbs_202402\Academy\DB\DB\bin\Debug\net8.0\DB.deps.json
+C:\Works\202408\sbs_202402\Academy\DB\DB\bin\Debug\net8.0\DB.runtimeconfig.json
+C:\Works\202408\sbs_202402\Academy\DB\DB\bin\Debug\net8.0\DB.dll
+C:\Works\202408\sbs_202402\Academy\DB\DB\bin\Debug\net8.0\DB.pdb
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.csproj.AssemblyReference.cache
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.AssemblyInfoInputs.cache
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.AssemblyInfo.cs
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.csproj.CoreCompileInputs.cache
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.sourcelink.json
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.dll
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\refint\DB.dll
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.pdb
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\DB.genruntimeconfig.cache
+C:\Works\202408\sbs_202402\Academy\DB\DB\obj\Debug\net8.0\ref\DB.dll
